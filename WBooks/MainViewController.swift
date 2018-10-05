@@ -6,4 +6,18 @@
 //  Copyright © 2018 Wolox. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+final class MainViewController: UIViewController {
+    
+    
+    @IBOutlet weak var Table: UITableView!
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
+    
+}

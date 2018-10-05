@@ -28,13 +28,19 @@
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
 		9D1575071CB1B27500EA395E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575061CB1B27500EA395E /* ViewController.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
-		9D15750F1CB1B27500EA395E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */; };
 		9D15751A1CB1B27500EA395E /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575191CB1B27500EA395E /* WBooksTests.swift */; };
 		9D1575251CB1B27500EA395E /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575241CB1B27500EA395E /* WBooksUITests.swift */; };
 		9D1F7A711CBED81900E20BE5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1F7A6F1CBED81900E20BE5 /* Nimble.framework */; };
 		9D1F7A721CBED81900E20BE5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1F7A701CBED81900E20BE5 /* Quick.framework */; };
 		9D1F7A741CBED82900E20BE5 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9D1F7A6F1CBED81900E20BE5 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D1F7A751CBED82900E20BE5 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9D1F7A701CBED81900E20BE5 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CAABFB322167C21A00CBC62C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAABFB312167C21A00CBC62C /* Main.storyboard */; };
+		CAABFB332167C36F00CBC62C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAABFB312167C21A00CBC62C /* Main.storyboard */; };
+		CAABFB342167C37000CBC62C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAABFB312167C21A00CBC62C /* Main.storyboard */; };
+		CAABFB352167C3C500CBC62C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */; };
+		CAABFB362167C3EC00CBC62C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */; };
+		CAABFB372167C3F000CBC62C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */; };
+		CAEC8F052167BD3000F33B37 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEC8F042167BD3000F33B37 /* MainViewController.swift */; };
 		CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB934DC1D21992100DF75C2 /* Environment.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +105,8 @@
 		9D1F7A701CBED81900E20BE5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		9D6E40551CB1B939008CE558 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		9D6E40561CB1B93A008CE558 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		CAABFB312167C21A00CBC62C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CAEC8F042167BD3000F33B37 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CEB934DC1D21992100DF75C2 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
 		CED934871E8466A60017CF96 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
@@ -208,6 +216,8 @@
 				9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */,
 				9D1575101CB1B27500EA395E /* Info.plist */,
 				CEB934DC1D21992100DF75C2 /* Environment.swift */,
+				CAEC8F042167BD3000F33B37 /* MainViewController.swift */,
+				CAABFB312167C21A00CBC62C /* Main.storyboard */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";
@@ -375,7 +385,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D15750F1CB1B27500EA395E /* LaunchScreen.storyboard in Resources */,
+				CAABFB352167C3C500CBC62C /* LaunchScreen.storyboard in Resources */,
+				CAABFB322167C21A00CBC62C /* Main.storyboard in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +395,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAABFB332167C36F00CBC62C /* Main.storyboard in Resources */,
+				CAABFB362167C3EC00CBC62C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +404,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAABFB342167C37000CBC62C /* Main.storyboard in Resources */,
+				CAABFB372167C3F000CBC62C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAEC8F052167BD3000F33B37 /* MainViewController.swift in Sources */,
 				9D1575071CB1B27500EA395E /* ViewController.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				46BEC9492117C7AE004338C4 /* NetworkingBootstrapper.swift in Sources */,
@@ -557,6 +573,8 @@
 			baseConfigurationReference = E17065121F75B6A10042755C /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-debug";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -664,6 +682,8 @@
 			baseConfigurationReference = CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-alpha";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -771,6 +791,8 @@
 			baseConfigurationReference = E17065131F75B6A10042755C /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-release";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -876,6 +898,8 @@
 			baseConfigurationReference = E12DE1621F772A370072C2FF /* Production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-production";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (

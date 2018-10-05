@@ -15,12 +15,7 @@ final class ViewController: UIViewController {
         
         view.backgroundColor = UIColor.white
         
-        let frame = CGRect(x: 0, y: view.frame.size.height / 2 - 11, width: view.frame.size.width, height: 22)
-        let label = UILabel(frame: frame)
-        label.text = "Welcome! This is a new blank project"
-        label.textAlignment = .center
-        label.sizeToFit()
-        view.addSubview(label)
+        
     }
 
 }
