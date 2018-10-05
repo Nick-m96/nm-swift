@@ -1,14 +1,10 @@
 WBooks iOS
 ----------------
 
-%project-ci-badge
-%project-codestats-badge
-
 WBooks es una aplicación que gestiona reservas de libros para la biblioteca que dispone Wolox en el 2do piso.
 
 # Project info & resources
 
-* **Project Manager**: %pm-full-name - %pm-email-address
 * **Technical Leader**: Daniela Riesgo - daniela.riesgo@wolox.com.ar
 
   * [Trello board](https://trello.com/b/U7aTD8J8/training-swift-nicolas-manograsso): Project issues and current status.
