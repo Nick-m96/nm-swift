@@ -14,8 +14,6 @@
 		46BEC9302117C468004338C4 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BEC91B2117BB4A004338C4 /* Curry.framework */; };
 		46BEC9312117C468004338C4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BEC91D2117BB4A004338C4 /* KeychainSwift.framework */; };
 		46BEC9322117C468004338C4 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BEC9262117BDBB004338C4 /* Networking.framework */; };
-		46BEC9332117C468004338C4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1F7A6F1CBED81900E20BE5 /* Nimble.framework */; };
-		46BEC9342117C468004338C4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1F7A701CBED81900E20BE5 /* Quick.framework */; };
 		46BEC9352117C468004338C4 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D6E40551CB1B939008CE558 /* ReactiveCocoa.framework */; };
 		46BEC9362117C468004338C4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED934871E8466A60017CF96 /* ReactiveSwift.framework */; };
 		46BEC9372117C468004338C4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D6E40561CB1B93A008CE558 /* Result.framework */; };
@@ -23,24 +21,24 @@
 		46BEC9392117C468004338C4 /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BEC9192117B6C3004338C4 /* WolmoCore.framework */; };
 		46BEC93B2117C468004338C4 /* ReactiveMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BEC93A2117C468004338C4 /* ReactiveMapKit.framework */; };
 		46BEC9462117C765004338C4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BEC9452117C765004338C4 /* User.swift */; };
-		46BEC9492117C7AE004338C4 /* NetworkingBootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BEC9482117C7AE004338C4 /* NetworkingBootstrapper.swift */; };
 		46BEC94B2117DA4E004338C4 /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BEC94A2117DA4E004338C4 /* AuthUser.swift */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
 		9D1575071CB1B27500EA395E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575061CB1B27500EA395E /* ViewController.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
 		9D15751A1CB1B27500EA395E /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575191CB1B27500EA395E /* WBooksTests.swift */; };
 		9D1575251CB1B27500EA395E /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575241CB1B27500EA395E /* WBooksUITests.swift */; };
-		9D1F7A711CBED81900E20BE5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1F7A6F1CBED81900E20BE5 /* Nimble.framework */; };
-		9D1F7A721CBED81900E20BE5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1F7A701CBED81900E20BE5 /* Quick.framework */; };
-		9D1F7A741CBED82900E20BE5 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9D1F7A6F1CBED81900E20BE5 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9D1F7A751CBED82900E20BE5 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9D1F7A701CBED81900E20BE5 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CAABFB322167C21A00CBC62C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAABFB312167C21A00CBC62C /* Main.storyboard */; };
-		CAABFB332167C36F00CBC62C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAABFB312167C21A00CBC62C /* Main.storyboard */; };
-		CAABFB342167C37000CBC62C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAABFB312167C21A00CBC62C /* Main.storyboard */; };
-		CAABFB352167C3C500CBC62C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */; };
-		CAABFB362167C3EC00CBC62C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */; };
-		CAABFB372167C3F000CBC62C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */; };
-		CAEC8F052167BD3000F33B37 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEC8F042167BD3000F33B37 /* MainViewController.swift */; };
+		CA025F5F216CE33900F853E4 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA025F5E216CE33900F853E4 /* Book.swift */; };
+		CA025F61216CE35800F853E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA025F60216CE35800F853E4 /* Main.storyboard */; };
+		CA025F63216CE36400F853E4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA025F62216CE36400F853E4 /* MainViewController.swift */; };
+		CA025F65216CE36800F853E4 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA025F64216CE36800F853E4 /* TableViewCell.swift */; };
+		CAC07DDF216BB5930023B83E /* NetworkingBootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BEC9482117C7AE004338C4 /* NetworkingBootstrapper.swift */; };
+		CAC07DE3216BB9D30023B83E /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1F7A6F1CBED81900E20BE5 /* Nimble.framework */; };
+		CAC07DE4216BB9D60023B83E /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1F7A701CBED81900E20BE5 /* Quick.framework */; };
+		CAC24488216BD0AF00C236BB /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1F7A6F1CBED81900E20BE5 /* Nimble.framework */; };
+		CAC24489216BD0B100C236BB /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1F7A701CBED81900E20BE5 /* Quick.framework */; };
+		CAC2448E216BDD3100C236BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */; };
+		CAC2448F216BDD3100C236BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */; };
+		CAC24490216BDD3200C236BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */; };
 		CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB934DC1D21992100DF75C2 /* Environment.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,8 +66,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9D1F7A741CBED82900E20BE5 /* Nimble.framework in CopyFiles */,
-				9D1F7A751CBED82900E20BE5 /* Quick.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,8 +101,10 @@
 		9D1F7A701CBED81900E20BE5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		9D6E40551CB1B939008CE558 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		9D6E40561CB1B93A008CE558 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		CAABFB312167C21A00CBC62C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		CAEC8F042167BD3000F33B37 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CA025F5E216CE33900F853E4 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		CA025F60216CE35800F853E4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CA025F62216CE36400F853E4 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CA025F64216CE36800F853E4 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		CEB934DC1D21992100DF75C2 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
 		CED934871E8466A60017CF96 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
@@ -129,8 +127,6 @@
 				46BEC9302117C468004338C4 /* Curry.framework in Frameworks */,
 				46BEC9312117C468004338C4 /* KeychainSwift.framework in Frameworks */,
 				46BEC9322117C468004338C4 /* Networking.framework in Frameworks */,
-				46BEC9332117C468004338C4 /* Nimble.framework in Frameworks */,
-				46BEC9342117C468004338C4 /* Quick.framework in Frameworks */,
 				46BEC9352117C468004338C4 /* ReactiveCocoa.framework in Frameworks */,
 				46BEC9362117C468004338C4 /* ReactiveSwift.framework in Frameworks */,
 				46BEC9372117C468004338C4 /* Result.framework in Frameworks */,
@@ -143,8 +139,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D1F7A711CBED81900E20BE5 /* Nimble.framework in Frameworks */,
-				9D1F7A721CBED81900E20BE5 /* Quick.framework in Frameworks */,
+				CAC07DE4216BB9D60023B83E /* Quick.framework in Frameworks */,
+				CAC07DE3216BB9D30023B83E /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +148,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAC24489216BD0B100C236BB /* Quick.framework in Frameworks */,
+				CAC24488216BD0AF00C236BB /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,8 +214,10 @@
 				9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */,
 				9D1575101CB1B27500EA395E /* Info.plist */,
 				CEB934DC1D21992100DF75C2 /* Environment.swift */,
-				CAEC8F042167BD3000F33B37 /* MainViewController.swift */,
-				CAABFB312167C21A00CBC62C /* Main.storyboard */,
+				CA025F60216CE35800F853E4 /* Main.storyboard */,
+				CA025F62216CE36400F853E4 /* MainViewController.swift */,
+				CA025F64216CE36800F853E4 /* TableViewCell.swift */,
+				CA025F5E216CE33900F853E4 /* Book.swift */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";
@@ -385,8 +385,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAABFB352167C3C500CBC62C /* LaunchScreen.storyboard in Resources */,
-				CAABFB322167C21A00CBC62C /* Main.storyboard in Resources */,
+				CA025F61216CE35800F853E4 /* Main.storyboard in Resources */,
+				CAC2448E216BDD3100C236BB /* LaunchScreen.storyboard in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,8 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAABFB332167C36F00CBC62C /* Main.storyboard in Resources */,
-				CAABFB362167C3EC00CBC62C /* LaunchScreen.storyboard in Resources */,
+				CAC2448F216BDD3100C236BB /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,8 +403,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAABFB342167C37000CBC62C /* Main.storyboard in Resources */,
-				CAABFB372167C3F000CBC62C /* LaunchScreen.storyboard in Resources */,
+				CAC24490216BDD3200C236BB /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +437,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 		9D6E405E1CB1B94C008CE558 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -453,7 +451,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ ! -z \"$RUNNING_ON_CI\" ]\nthen\n    echo \"SwiftLint run script has been disabled\"\n    exit 0\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if [ ! -z \"$RUNNING_ON_CI\" ]\nthen\n    echo \"SwiftLint run script has been disabled\"\n    exit 0\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -462,13 +460,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAEC8F052167BD3000F33B37 /* MainViewController.swift in Sources */,
 				9D1575071CB1B27500EA395E /* ViewController.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
-				46BEC9492117C7AE004338C4 /* NetworkingBootstrapper.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
+				CA025F5F216CE33900F853E4 /* Book.swift in Sources */,
 				46BEC94B2117DA4E004338C4 /* AuthUser.swift in Sources */,
 				46BEC9462117C765004338C4 /* User.swift in Sources */,
+				CAC07DDF216BB5930023B83E /* NetworkingBootstrapper.swift in Sources */,
+				CA025F63216CE36400F853E4 /* MainViewController.swift in Sources */,
+				CA025F65216CE36800F853E4 /* TableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +616,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E17065121F75B6A10042755C /* Debug.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WBooksUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksUITests;
@@ -725,6 +729,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WBooksUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksUITests;
@@ -833,6 +841,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E17065131F75B6A10042755C /* Release.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WBooksUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksUITests;
@@ -940,6 +952,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E12DE1621F772A370072C2FF /* Production.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WBooksUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksUITests;
