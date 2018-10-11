@@ -38,10 +38,24 @@ class NetworkingBootstrapper {
         injectCurrentUserFetcher()
     }
 
-//    func createWBooksRepository() -> WBooksRepository {
-//        return WBooksRepository(networkingConfiguration: networkingConfiguration, sessionManager: _sessionManager)
-//    }
+    func createWBooksRepository() -> [Book]{
+        let repository = BookRepository(
+            networkingConfiguration: networkingConfiguration,
+            sessionManager: _sessionManager)
+        
+        var booksArray = [Book]()
+        
+        repository.fetchEntities().startWithResult {
+            switch $0 {
+            case .success(let b):
+                booksArray = b
+            case .failure(let error):  print("\(error)")
+            }
+        }
+        
+        return booksArray
 
+    }
 }
 
 // MARK: Private Methods

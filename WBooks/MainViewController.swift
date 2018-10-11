@@ -10,49 +10,42 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    var libros: [Book] = []
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    let n = NetworkingBootstrapper.shared.bootstrap()
+    let bookRepo = NetworkingBootstrapper.shared.createWBooksRepository()
     override func viewDidLoad() {
         super.viewDidLoad()
-        libros = createArray()
         
-    }
-    
-    func createArray() -> [Book]{
-        var tempLib : [Book] = []
         
-        let b1 = Book(title: "primero")
-        let b2 = Book(title: "segundo")
-        let b3 = Book(title: "tercero")
-        let b4 = Book(title: "cuarto")
-        let b5 = Book(title: "quinto")
         
-        tempLib.append(b1)
-        tempLib.append(b2)
-        tempLib.append(b3)
-        tempLib.append(b4)
-        tempLib.append(b5)
         
-        return tempLib
+        
+//       A mano
+//        let libro = Book(id: 11, author: "String", title: "String", genre: "String", publisher: "String", year: "String")
+//        libros.append(libro)
+
+        let a = 20
+        var b = a - 2
     }
     
 }
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate{
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return libros.count
+        return bookRepo.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let libro = libros[indexPath.row]
-        
+        let libro = bookRepo[indexPath.row]
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
-        
+
         cell.setText(text: libro)
-        
+
         return cell
     }
-    
+
 }
