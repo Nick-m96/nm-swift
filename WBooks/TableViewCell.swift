@@ -11,10 +11,24 @@ import UIKit
 class TableViewCell: UITableViewCell {
 
     
-    @IBOutlet weak var LabelText: UILabel!
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblAuthor: UILabel!
+    @IBOutlet weak var imgBook: UIImageView!
     
-    func setText(text: Book){
-        LabelText.text = text.title
+    
+    func setText(book: Book){
+        lblTitle.text = book.title
+        lblAuthor.text = book.author
+        let imageURL : String?
+        imageURL = book.image
+        if imageURL != nil{
+            do{
+                try imgBook.image = UIImage(data: Data(contentsOf: URL(string: imageURL!)!))
+            }
+            catch{print("error")}
+        }
+        
+
     }
 
 }

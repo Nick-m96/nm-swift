@@ -11,6 +11,7 @@ import Networking
 import ReactiveSwift
 import AlamofireNetworkActivityIndicator
 import AlamofireNetworkActivityLogger
+import UIKit
 
 class NetworkingBootstrapper {
 
@@ -38,23 +39,16 @@ class NetworkingBootstrapper {
         injectCurrentUserFetcher()
     }
 
-    func createWBooksRepository() -> [Book]{
+    func createWBooksRepository() -> BookRepository{
         let repository = BookRepository(
             networkingConfiguration: networkingConfiguration,
             sessionManager: _sessionManager)
         
-        var booksArray = [Book]()
         
-        repository.fetchEntities().startWithResult {
-            switch $0 {
-            case .success(let b):
-                booksArray = b
-            case .failure(let error):  print("\(error)")
-            }
-        }
         
-        return booksArray
+        return repository
 
+        
     }
 }
 

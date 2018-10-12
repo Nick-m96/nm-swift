@@ -6,6 +6,9 @@
 //  Copyright © 2018 Wolox. All rights reserved.
 //
 
+import Foundation
+import Networking
+import ReactiveSwift
 import UIKit
 
 final class MainViewController: UIViewController {
@@ -13,12 +16,21 @@ final class MainViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let n = NetworkingBootstrapper.shared.bootstrap()
     let bookRepo = NetworkingBootstrapper.shared.createWBooksRepository()
+    var bookArray = [Book]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        bookRepo.fetchEntities().observe(on: UIScheduler()).startWithResult{
+            switch $0 {
+            case .success(let b):
+                self.bookArray = b
+                self.tableView.reloadData()
+            case .failure(let error):  print("\(error)")
+            }
+            
+        }
         
         
         
@@ -26,8 +38,6 @@ final class MainViewController: UIViewController {
 //        let libro = Book(id: 11, author: "String", title: "String", genre: "String", publisher: "String", year: "String")
 //        libros.append(libro)
 
-        let a = 20
-        var b = a - 2
     }
     
 }
@@ -35,15 +45,15 @@ final class MainViewController: UIViewController {
 extension MainViewController: UITableViewDataSource, UITableViewDelegate{
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bookRepo.count
+        return bookArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let libro = bookRepo[indexPath.row]
+        let libro = bookArray[indexPath.row]
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
 
-        cell.setText(text: libro)
+        cell.setText(book: libro)
 
         return cell
     }
