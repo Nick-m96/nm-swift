@@ -23,8 +23,8 @@ final class MainViewController: UIViewController {
         
         _bookRepo.fetchBooks().observe(on: UIScheduler()).startWithResult{
             switch $0 {
-            case .success(let _books):
-                self._bookArray = _books
+            case .success(let books):
+                self._bookArray = books
                 self.tableView.reloadData()
             case .failure(let error):  print("\(error)")
             }
