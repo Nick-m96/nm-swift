@@ -13,49 +13,35 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
-    
     @IBOutlet weak var tableView: UITableView!
     
-    let bookRepo = NetworkingBootstrapper.shared.createWBooksRepository()
-    var bookArray = [Book]()
+    private let _bookRepo = NetworkingBootstrapper.shared.createWBooksRepository()
+    private var _bookArray = [Book]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bookRepo.fetchEntities().observe(on: UIScheduler()).startWithResult{
+        _bookRepo.fetchBooks().observe(on: UIScheduler()).startWithResult{
             switch $0 {
-            case .success(let b):
-                self.bookArray = b
+            case .success(let _books):
+                self._bookArray = _books
                 self.tableView.reloadData()
             case .failure(let error):  print("\(error)")
             }
-            
         }
-        
-        
-        
-//       A mano
-//        let libro = Book(id: 11, author: "String", title: "String", genre: "String", publisher: "String", year: "String")
-//        libros.append(libro)
-
     }
-    
 }
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate{
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bookArray.count
+        return _bookArray.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let libro = bookArray[indexPath.row]
-
+        let book = _bookArray[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
-
-        cell.setText(book: libro)
-
+        cell.setText(book: book)
         return cell
     }
-
 }
