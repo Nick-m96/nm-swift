@@ -11,6 +11,7 @@ import Networking
 import ReactiveSwift
 import AlamofireNetworkActivityIndicator
 import AlamofireNetworkActivityLogger
+import UIKit
 
 class NetworkingBootstrapper {
 
@@ -38,10 +39,13 @@ class NetworkingBootstrapper {
         injectCurrentUserFetcher()
     }
 
-//    func createWBooksRepository() -> WBooksRepository {
-//        return WBooksRepository(networkingConfiguration: networkingConfiguration, sessionManager: _sessionManager)
-//    }
-
+    func createWBooksRepository() -> BookRepository{
+        let repository = BookRepository(
+            networkingConfiguration: networkingConfiguration,
+            sessionManager: _sessionManager)
+        
+        return repository
+    }
 }
 
 // MARK: Private Methods
