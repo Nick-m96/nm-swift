@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  WBooks
+
+  Created by Nicolas Manograsso on 17/10/2018.
+  Copyright © 2018 Wolox. All rights reserved.
+*/
+
+/* LIBRARY VIEW */
+"NAVIGATION_BAR_TITLE_LIBRARY" = "Biblioteca";
+"NAVIGATION_BAR_TITLE_WISHLIST" = "Lista de deseos";
+"NAVIGATION_BAR_TITLE_RENTALS" = "Mis rentas";
+"NAVIGATION_BAR_TITLE_ADDNEW" = "Agregar Nuevo";

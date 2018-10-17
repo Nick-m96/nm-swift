@@ -11,15 +11,14 @@ import Networking
 import ReactiveSwift
 import UIKit
 
-final class MainViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
+final class LibraryViewController: UITableViewController {
     
     private let _bookRepo = NetworkingBootstrapper.shared.createWBooksRepository()
     private var _bookArray = [Book]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = NSLocalizedString("NAVIGATION_BAR_TITLE_LIBRARY", comment: "")
         
         _bookRepo.fetchBooks().observe(on: UIScheduler()).startWithResult{
             switch $0 {
@@ -32,16 +31,21 @@ final class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: UITableViewDataSource, UITableViewDelegate{
+extension LibraryViewController{
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return _bookArray.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let book = _bookArray[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
+        let cell = Bundle.main.loadNibNamed("TableViewCell", owner: self, options: nil)?.first as! TableViewCell
         cell.setText(book: book)
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
 }
+

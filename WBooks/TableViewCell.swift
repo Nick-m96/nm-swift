@@ -10,9 +10,10 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
+
+    @IBOutlet weak var imgBook: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblAuthor: UILabel!
-    @IBOutlet weak var imgBook: UIImageView!
     
     func setText(book: Book){
         lblTitle.text = book.title
