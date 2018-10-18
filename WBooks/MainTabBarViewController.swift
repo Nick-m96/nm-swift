@@ -14,7 +14,6 @@ class MainTabBarViewController: UITabBarController {
         super.viewDidLoad()
         setupTabBar()
         setupNavBar()
-        // Do any additional setup after loading the view.
     }
     
     func setupNavBar(){
@@ -31,7 +30,6 @@ class MainTabBarViewController: UITabBarController {
         let wishList = createNavController(vc: WishListViewController(), selected: UIImage(named: "wishlist-blue")!, unselected: UIImage(named: "wishlist-grey")!)
         let rentals = createNavController(vc: RentalsViewController(), selected: UIImage(named: "rentals-blue")!, unselected: UIImage(named: "rentals-grey")!)
         viewControllers = [library, wishList, addNew, rentals]
-
     }
 }
 

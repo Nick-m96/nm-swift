@@ -232,13 +232,13 @@
 				CA025F60216CE35800F853E4 /* Main.storyboard */,
 				9D1575101CB1B27500EA395E /* Info.plist */,
 				CEB934DC1D21992100DF75C2 /* Environment.swift */,
-				CA025F64216CE36800F853E4 /* TableViewCell.swift */,
 				CAD677F3216D249800B2797A /* BookRepository.swift */,
 				CA62FB2D2177A37300CC4220 /* MainTabBarViewController.swift */,
 				CA62FB2C2177A37200CC4220 /* AddNewViewController.swift */,
-				CA62FB2B2177A37200CC4220 /* LibraryViewController.swift */,
 				CA62FB2E2177A37300CC4220 /* WishListViewController.swift */,
 				CA62FB332177A4F800CC4220 /* RentalsViewController.swift */,
+				CA62FB2B2177A37200CC4220 /* LibraryViewController.swift */,
+				CA025F64216CE36800F853E4 /* TableViewCell.swift */,
 				CA62FB342177A4F800CC4220 /* TableViewCell.xib */,
 			);
 			path = WBooks;

@@ -37,7 +37,4 @@ extension Book: Argo.Decodable {
             <*> json <|? "image_url"
 //            <*> json <| "description"
     }
-    
-    
-    
 }

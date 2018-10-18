@@ -22,5 +22,4 @@ internal class BookRepository: AbstractRepository {
             decode($0).toResult()
         }
     }
-    
 }

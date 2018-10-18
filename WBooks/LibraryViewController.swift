@@ -19,6 +19,8 @@ final class LibraryViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = NSLocalizedString("NAVIGATION_BAR_TITLE_LIBRARY", comment: "")
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = UIColor.init(red: 234, green: 246, blue: 250, alpha: 1)
         
         _bookRepo.fetchBooks().observe(on: UIScheduler()).startWithResult{
             switch $0 {
