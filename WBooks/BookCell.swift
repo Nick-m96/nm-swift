@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class BookCell: UITableViewCell {
 
 
     @IBOutlet weak var imgBook: UIImageView!

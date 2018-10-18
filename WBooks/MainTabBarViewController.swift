@@ -22,7 +22,6 @@ class MainTabBarViewController: UITabBarController {
             let searchController = UISearchController(searchResultsController: nil)
             navigationItem.searchController = searchController
         }
-        navigationItem.title = "Wishlist"
     }
     
     func setupTabBar(){
@@ -37,8 +36,7 @@ class MainTabBarViewController: UITabBarController {
 
 extension UIViewController{
     func createNavController(vc: UIViewController, selected: UIImage, unselected: UIImage) -> UINavigationController {
-        let viewController = vc
-        let navController = UINavigationController(rootViewController: viewController)
+        let navController = UINavigationController(rootViewController: vc)
         navController.tabBarItem.image = selected
         navController.tabBarItem.selectedImage = unselected
         return navController

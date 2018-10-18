@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import WolmoCore
 
 class RentalsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = NSLocalizedString("NAVIGATION_BAR_TITLE_RENTALS", comment: "")
+        navigationItem.title = "NAVIGATION_BAR_TITLE_RENTALS".localized()
         view.backgroundColor = UIColor.white
     }
 }
