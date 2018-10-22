@@ -10,6 +10,7 @@ import Foundation
 import Networking
 import ReactiveSwift
 import UIKit
+import WolmoCore
 
 final class LibraryViewController: UITableViewController {
     
@@ -18,9 +19,9 @@ final class LibraryViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = NSLocalizedString("NAVIGATION_BAR_TITLE_LIBRARY", comment: "")
-        tableView.separatorStyle = .none
-        tableView.backgroundColor = UIColor.init(red: 234, green: 246, blue: 250, alpha: 1)
+        navigationItem.title = "NAVIGATION_BAR_TITLE_LIBRARY".localized()
+        tableView.register(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "BookCell")
+        setTableBackground()
         
         _bookRepo.fetchBooks().observe(on: UIScheduler()).startWithResult{
             switch $0 {
@@ -31,23 +32,35 @@ final class LibraryViewController: UITableViewController {
             }
         }
     }
+    
+    func setTableBackground(){
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = UIColor.wBooksBackground
+    }
 }
 
 extension LibraryViewController{
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return _bookArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let book = _bookArray[indexPath.row]
-        let cell = Bundle.main.loadNibNamed("TableViewCell", owner: self, options: nil)?.first as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath) as! BookCell
         cell.setText(book: book)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 140
     }
 }
 
+internal extension UIColor {
+    
+    static var wBooksBackground: UIColor {
+        return UIColor(red: 234/255, green: 246/255, blue: 250/255, alpha: 1)
+    }
+    
+}

@@ -35,8 +35,7 @@ class MainTabBarViewController: UITabBarController {
 
 extension UIViewController{
     func createNavController(vc: UIViewController, selected: UIImage, unselected: UIImage) -> UINavigationController {
-        let viewController = vc
-        let navController = UINavigationController(rootViewController: viewController)
+        let navController = UINavigationController(rootViewController: vc)
         navController.tabBarItem.image = selected
         navController.tabBarItem.selectedImage = unselected
         return navController
