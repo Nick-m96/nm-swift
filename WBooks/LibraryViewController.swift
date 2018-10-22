@@ -20,8 +20,7 @@ final class LibraryViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "NAVIGATION_BAR_TITLE_LIBRARY".localized()
-       
-        tableView.register(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "BookCell") //(BookCell.self, forCellReuseIdentifier: "BookCell")
+        tableView.register(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "BookCell")
         
         _bookRepo.fetchBooks().observe(on: UIScheduler()).startWithResult{
             switch $0 {
@@ -43,7 +42,6 @@ extension LibraryViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let book = _bookArray[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath) as! BookCell
-        
         cell.setText(book: book)
         return cell
     }
