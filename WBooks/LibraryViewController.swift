@@ -10,16 +10,17 @@ import Foundation
 import Networking
 import ReactiveSwift
 import UIKit
+import WolmoCore
 
-final class MainViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
+final class LibraryViewController: UITableViewController {
     
     private let _bookRepo = NetworkingBootstrapper.shared.createWBooksRepository()
     private var _bookArray = [Book]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "NAVIGATION_BAR_TITLE_LIBRARY".localized()
+        tableView.register(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "BookCell")
         
         _bookRepo.fetchBooks().observe(on: UIScheduler()).startWithResult{
             switch $0 {
@@ -32,16 +33,21 @@ final class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: UITableViewDataSource, UITableViewDelegate{
+extension LibraryViewController{
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return _bookArray.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let book = _bookArray[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath) as! BookCell
         cell.setText(book: book)
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
 }
+
