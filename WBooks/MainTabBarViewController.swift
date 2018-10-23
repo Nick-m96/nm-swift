@@ -21,7 +21,6 @@ class MainTabBarViewController: UITabBarController {
             let searchController = UISearchController(searchResultsController: nil)
             navigationItem.searchController = searchController
         }
-        navigationItem.title = "Wishlist"
     }
     
     func setupTabBar(){

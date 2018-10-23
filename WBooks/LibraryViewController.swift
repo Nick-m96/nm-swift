@@ -24,7 +24,6 @@ final class LibraryViewController: UITableViewController {
         tableView.register(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "BookCell")
         setTableBackground()
         loadBooks()
-        
     }
     
     func loadBooks(){

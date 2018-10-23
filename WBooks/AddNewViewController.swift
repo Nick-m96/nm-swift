@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import WolmoCore
 
 class AddNewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = NSLocalizedString("NAVIGATION_BAR_TITLE_ADDNEW", comment: "")
+        navigationItem.title = "NAVIGATION_BAR_TITLE_ADDNEW".localized()
         view.backgroundColor = UIColor.white
     }
 }
