@@ -28,13 +28,12 @@ final class LibraryViewController: UITableViewController {
     }
     
     func loadBooks(){
-        if _AllBooksRead == false {
+        if !_AllBooksRead {
             _bookRepo.fetchBooks().observe(on: UIScheduler()).startWithResult{
+                [unowned self] in
                 switch $0 {
                 case .success(let books):
-                    if (books.count == 0) {
-                        self._AllBooksRead = true
-                    }
+                    self._AllBooksRead = (books.count == 0)
                     for book in books{
                         self._bookArray.append(book)
                     }
