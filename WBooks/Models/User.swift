@@ -35,5 +35,4 @@ extension User: Argo.Decodable {
             <*> json <| "last_name"
             <*> json <|? "image_url"
     }
-
 }
