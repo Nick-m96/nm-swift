@@ -15,11 +15,16 @@ import Foundation
 internal class BookRepository: AbstractRepository {
     
     private static let _BooksPath = "books"
+    private static let _PathPage = "page"
+    private var _page = 0
     
     public func fetchBooks() -> SignalProducer<[Book], RepositoryError> {
         let path = BookRepository._BooksPath
-        return performRequest(method: .get, path: path) {
+        _page += 1
+        return performRequest(method: .get, path: path, parameters: [BookRepository._PathPage: _page])
+        {
             decode($0).toResult()
         }
+        
     }
 }

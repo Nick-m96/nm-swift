@@ -16,21 +16,35 @@ final class LibraryViewController: UITableViewController {
     
     private let _bookRepo = NetworkingBootstrapper.shared.createWBooksRepository()
     private var _bookArray = [Book]()
+    private var _AllBooksRead = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "NAVIGATION_BAR_TITLE_LIBRARY".localized()
         tableView.register(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "BookCell")
         setTableBackground()
+        loadBooks()
         
-        _bookRepo.fetchBooks().observe(on: UIScheduler()).startWithResult{
-            switch $0 {
-            case .success(let books):
-                self._bookArray = books
-                self.tableView.reloadData()
-            case .failure(let error):  print("\(error)")
+    }
+    
+    func loadBooks(){
+        if _AllBooksRead == false {
+            _bookRepo.fetchBooks().observe(on: UIScheduler()).startWithResult{
+                switch $0 {
+                case .success(let books):
+                    if (books.count == 0) {
+                        self._AllBooksRead = true
+                    }
+                    for book in books{
+                        self._bookArray.append(book)
+                    }
+                    
+                    self.tableView.reloadData()
+                case .failure(let error):  print("\(error)")
+                }
             }
         }
+        
     }
     
     func setTableBackground(){
@@ -49,6 +63,11 @@ extension LibraryViewController{
         let book = _bookArray[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath) as! BookCell
         cell.setText(book: book)
+        
+        if indexPath.row == _bookArray.count - 1 { // last cell
+            loadBooks()
+        }
+        
         return cell
     }
     
