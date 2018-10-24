@@ -17,9 +17,4 @@ class RentalsViewController: UIViewController {
         //navigationItem.title = "NAVIGATION_BAR_TITLE_RENTALS".localized()
         view.backgroundColor = UIColor.white
     }
-    
-    override func loadView() {
-        super.loadView()
-        view = BookInfoDetailView.loadFromNib()
-    }
 }
