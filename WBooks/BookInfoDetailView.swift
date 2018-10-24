@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import WolmoCore
+import Foundation
 
-class BookInfoDetailCell: UIView {
+class BookInfoDetailView: UIView, NibLoadable {
 
     @IBOutlet weak var btnAddWishlist: UIButton!
     @IBOutlet weak var btnRent: UIButton!
     
-//    func setButtons() {
-//        btnRent.backgroundColor = gradient?.colors
-//    }
+    func setupTexts(){
+        btnRent.setTitle("aA", for: .normal)
+    }
 }
