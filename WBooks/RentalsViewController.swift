@@ -12,7 +12,7 @@ import ReactiveSwift
 import UIKit
 import WolmoCore
 
-class RentalsViewController: UITableViewController {
+class RentalsViewController: UIViewController {
  
     private let _bookRepo = NetworkingBootstrapper.shared.createWBooksRepository()
     private var _bookArray = [Book]()
@@ -24,5 +24,6 @@ class RentalsViewController: UITableViewController {
         let tableBookVC = TableBookViewController()
         self.addChildViewController(tableBookVC)
         view.addSubview(tableBookVC.tableView)
+        tableBookVC.didSelectedEnable = true
     }
 }
