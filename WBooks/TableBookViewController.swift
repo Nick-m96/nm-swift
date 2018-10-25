@@ -17,6 +17,7 @@ final class TableBookViewController: UITableViewController {
     private let _bookRepo = NetworkingBootstrapper.shared.createWBooksRepository()
     private var _bookArray = [Book]()
     private var _AllBooksRead = false
+    public var didSelectedEnable = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +42,6 @@ final class TableBookViewController: UITableViewController {
                 }
             }
         }
-        
     }
     
     func setTableBackground(){
@@ -73,10 +73,12 @@ extension TableBookViewController{
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let book = _bookArray[indexPath.row]
-        let BookDetailVC = BookInfoDetailViewController()
-        BookDetailVC.bookDetail.setupTexts(book: book)
-        
-        self.navigationController?.pushViewController(BookDetailVC, animated: true)
+        if didSelectedEnable{
+            let book = _bookArray[indexPath.row]
+            let BookDetailVC = BookInfoDetailViewController()
+            BookDetailVC.bookDetail.setupTexts(book: book)
+            
+            self.navigationController?.pushViewController(BookDetailVC, animated: true)
+        }
     }
 }

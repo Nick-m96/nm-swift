@@ -24,5 +24,6 @@ class RentalsViewController: UIViewController {
         let tableBookVC = TableBookViewController()
         self.addChildViewController(tableBookVC)
         view.addSubview(tableBookVC.tableView)
+        tableBookVC.didSelectedEnable = true
     }
 }
