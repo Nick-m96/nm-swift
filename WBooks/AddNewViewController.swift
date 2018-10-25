@@ -16,4 +16,10 @@ class AddNewViewController: UIViewController {
         navigationItem.title = "NAVIGATION_BAR_TITLE_ADDNEW".localized()
         view.backgroundColor = WBookColor.background
     }
+    
+    override func loadView() {
+        super.loadView()
+        let addNewV = AddNewView.loadFromNib()! as AddNewView
+        view.addSubview(addNewV)
+    }
 }
