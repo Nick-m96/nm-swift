@@ -47,10 +47,12 @@
 		CAC2448F216BDD3100C236BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */; };
 		CAC24490216BDD3200C236BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */; };
 		CAD15D5F2180C1C300E6FE29 /* WBookColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD15D5E2180C1C300E6FE29 /* WBookColor.swift */; };
+		CAD15D632180F42400E6FE29 /* BookInfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD15D622180F42400E6FE29 /* BookInfoDetailViewController.swift */; };
 		CAD49D8F217F873200C985A7 /* RoundedBuuton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD49D8E217F873200C985A7 /* RoundedBuuton.swift */; };
 		CAD49D91217F88E700C985A7 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD49D90217F88E700C985A7 /* GradientButton.swift */; };
 		CAD677F4216D249800B2797A /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD677F3216D249800B2797A /* BookRepository.swift */; };
 		CAE68E29217E43A90027CEDD /* BookInfoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE68E28217E43A90027CEDD /* BookInfoDetailView.swift */; };
+		CAF28166218209960016EE1A /* TableBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF28165218209960016EE1A /* TableBookViewController.swift */; };
 		CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB934DC1D21992100DF75C2 /* Environment.swift */; };
 /* End PBXBuildFile section */
 
@@ -126,10 +128,12 @@
 		CA62FB342177A4F800CC4220 /* BookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
 		CA62FB3B2177AE6E00CC4220 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CAD15D5E2180C1C300E6FE29 /* WBookColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBookColor.swift; sourceTree = "<group>"; };
+		CAD15D622180F42400E6FE29 /* BookInfoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoDetailViewController.swift; sourceTree = "<group>"; };
 		CAD49D8E217F873200C985A7 /* RoundedBuuton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBuuton.swift; sourceTree = "<group>"; };
 		CAD49D90217F88E700C985A7 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		CAD677F3216D249800B2797A /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
 		CAE68E28217E43A90027CEDD /* BookInfoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoDetailView.swift; sourceTree = "<group>"; };
+		CAF28165218209960016EE1A /* TableBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBookViewController.swift; sourceTree = "<group>"; };
 		CEB934DC1D21992100DF75C2 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
 		CED934871E8466A60017CF96 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
@@ -253,6 +257,8 @@
 				CA4C9175217E184500762388 /* BookInfoDetailView.xib */,
 				CAD49D8E217F873200C985A7 /* RoundedBuuton.swift */,
 				CAD49D90217F88E700C985A7 /* GradientButton.swift */,
+				CAD15D622180F42400E6FE29 /* BookInfoDetailViewController.swift */,
+				CAF28165218209960016EE1A /* TableBookViewController.swift */,
 				CAD15D5E2180C1C300E6FE29 /* WBookColor.swift */,
 			);
 			path = WBooks;
@@ -504,6 +510,7 @@
 				CA62FB302177A37300CC4220 /* AddNewViewController.swift in Sources */,
 				CAD15D5F2180C1C300E6FE29 /* WBookColor.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
+				CAF28166218209960016EE1A /* TableBookViewController.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				CAD49D8F217F873200C985A7 /* RoundedBuuton.swift in Sources */,
 				CAE68E29217E43A90027CEDD /* BookInfoDetailView.swift in Sources */,
@@ -513,6 +520,7 @@
 				46BEC94B2117DA4E004338C4 /* AuthUser.swift in Sources */,
 				CAD49D91217F88E700C985A7 /* GradientButton.swift in Sources */,
 				46BEC9462117C765004338C4 /* User.swift in Sources */,
+				CAD15D632180F42400E6FE29 /* BookInfoDetailViewController.swift in Sources */,
 				CA62FB2F2177A37300CC4220 /* LibraryViewController.swift in Sources */,
 				CAC07DDF216BB5930023B83E /* NetworkingBootstrapper.swift in Sources */,
 				CA62FB312177A37300CC4220 /* MainTabBarViewController.swift in Sources */,
