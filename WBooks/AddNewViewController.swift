@@ -31,4 +31,10 @@ class AddNewViewController: UIViewController {
         view.addConstraints([hor, ver, height, wid])
 //        addNewV.imgBook.reactive.pressed
     }
+    
+    override func loadView() {
+        super.loadView()
+        let addNewV = AddNewView.loadFromNib()! as AddNewView
+        view.addSubview(addNewV)
+    }
 }
