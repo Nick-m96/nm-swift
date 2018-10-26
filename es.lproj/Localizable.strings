@@ -6,8 +6,11 @@
   Copyright © 2018 Wolox. All rights reserved.
 */
 
-/* LIBRARY VIEW */
+/* NAVIGATION TITLE VIEW */
 "NAVIGATION_BAR_TITLE_LIBRARY" = "Biblioteca";
 "NAVIGATION_BAR_TITLE_WISHLIST" = "Lista de deseos";
 "NAVIGATION_BAR_TITLE_RENTALS" = "Mis rentas";
 "NAVIGATION_BAR_TITLE_ADDNEW" = "Agregar Nuevo";
+
+/* TEXT FIELD PLACEHOLDER */
+"BOOK_NAME" = "Nombre del libro";
