@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         let mainVC = MainTabBarViewController()
         window?.rootViewController = mainVC
-        
         return true
     }
 
