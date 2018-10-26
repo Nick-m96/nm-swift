@@ -20,3 +20,14 @@
 
 /* HEADER SUGGESTIONS */
 "LBL_SUGGESTIONS" = "Sugerencias";
+
+/* BUTTON TEXT */
+"BTN_SUBMIT" = "Enviar";
+
+
+/* TEXT FIELD PLACEHOLDER */
+"BOOK_NAME_PLACEHOLDER" = "Nombre del libro";
+"AUTHOR_PLACEHOLDER" = "Autor";
+"YEAR_PLACEHOLDER" = "Año";
+"TOPIC_PLACEHOLDER" = "Topico";
+"DESCRIPTION_PLACEHOLDER" = "Descripcion";

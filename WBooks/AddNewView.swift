@@ -9,5 +9,22 @@
 import UIKit
 import WolmoCore
 
-class AddNewView: UIView, NibLoadable{
+class AddNewView: UIScrollView, NibLoadable{
+    
+    @IBOutlet weak var txtDescription: UITextField!
+    @IBOutlet weak var txtTopic: UITextField!
+    @IBOutlet weak var txtYear: UITextField!
+    @IBOutlet weak var txtAuthor: UITextField!
+    @IBOutlet weak var txtBookName: UITextField!
+    @IBOutlet weak var btnSubmit: UIButton!
+    @IBOutlet weak var imgBook: UIButton!
+    
+    func setupText(){
+        btnSubmit.setTitle("BTN_SUBMIT".localized(), for: .normal)
+        txtBookName.placeholder = "BOOK_NAME_PLACEHOLDER".localized()
+        txtAuthor.placeholder = "AUTHOR_PLACEHOLDER".localized()
+        txtYear.placeholder = "YEAR_PLACEHOLDER".localized()
+        txtTopic.placeholder = "TOPIC_PLACEHOLDER".localized()
+        txtDescription.placeholder = "DESCRIPTION_PLACEHOLDER".localized()
+    }
 }

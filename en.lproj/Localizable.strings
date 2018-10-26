@@ -12,6 +12,17 @@
 "NAVIGATION_BAR_TITLE_RENTALS" = "My Rentals";
 "NAVIGATION_BAR_TITLE_ADDNEW" = "Add New";
 
+/* BUTTON TEXT */
+"BTN_SUBMIT" = "Submit";
+
+
+/* TEXT FIELD PLACEHOLDER */
+"BOOK_NAME_PLACEHOLDER" = "Book\'s name";
+"AUTHOR_PLACEHOLDER" = "Author";
+"YEAR_PLACEHOLDER" = "Year";
+"TOPIC_PLACEHOLDER" = "Topic";
+"DESCRIPTION_PLACEHOLDER" = "Description";
+
 "BUTTON_ADD_WISHLIST" = "Add to Wishlist";
 "BUTTON_RENT" = "Rent";
 
