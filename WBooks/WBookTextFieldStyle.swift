@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import WolmoCore
 
 class WBookTextFieldStyle: UITextField {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.placeholder = "Book\'s name"
+        self.placeholder = "BOOK_NAME".localized()
         self.borderStyle = .none
         self.layer.backgroundColor = UIColor.white.cgColor
         self.layer.masksToBounds = false
