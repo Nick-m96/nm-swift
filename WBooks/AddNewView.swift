@@ -11,6 +11,7 @@ import WolmoCore
 
 class AddNewView: UIScrollView, NibLoadable{
     
+    @IBOutlet weak var view: UIView!
     @IBOutlet weak var txtDescription: UITextField!
     @IBOutlet weak var txtTopic: UITextField!
     @IBOutlet weak var txtYear: UITextField!
