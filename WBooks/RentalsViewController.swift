@@ -13,11 +13,7 @@ import UIKit
 import WolmoCore
 
 class RentalsViewController: UIViewController {
- 
-    private let _bookRepo = NetworkingBootstrapper.shared.createWBooksRepository()
-    private var _bookArray = [Book]()
-    private var _AllBooksRead = false
-    
+     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "NAVIGATION_BAR_TITLE_RENTALS".localized()
