@@ -22,21 +22,37 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUa-SI-vS7">
                         <rect key="frame" x="10" y="10" width="355" height="135"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TRy-jU-pou" customClass="WBookTextFieldStyle" customModule="WBooks" customModuleProvider="target">
-                                <rect key="frame" x="104" y="52" width="147" height="31"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bdz-Kf-CoY">
+                                <rect key="frame" x="20" y="20" width="57" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="8Fu-yg-bLW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6s-vi-Ezy">
+                                <rect key="frame" x="85" y="97" width="262" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="the text is so much big to enter in one line" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmb-OX-bPo">
+                                <rect key="frame" x="85" y="20" width="262" height="69"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="TRy-jU-pou" firstAttribute="leading" secondItem="YUa-zI-AHV" secondAttribute="leading" constant="104" id="ID2-hx-5ae"/>
-                            <constraint firstItem="TRy-jU-pou" firstAttribute="centerY" secondItem="YUa-zI-AHV" secondAttribute="centerY" id="TPI-eW-6nd"/>
-                            <constraint firstItem="TRy-jU-pou" firstAttribute="centerX" secondItem="YUa-zI-AHV" secondAttribute="centerX" id="cin-Em-vXS"/>
-                            <constraint firstItem="TRy-jU-pou" firstAttribute="centerX" secondItem="GUa-SI-vS7" secondAttribute="centerX" id="erT-FC-u47"/>
-                            <constraint firstItem="TRy-jU-pou" firstAttribute="top" secondItem="YUa-zI-AHV" secondAttribute="top" constant="52" id="gIN-2a-SWv"/>
-                            <constraint firstItem="TRy-jU-pou" firstAttribute="centerY" secondItem="GUa-SI-vS7" secondAttribute="centerY" id="gU9-Bc-kyu"/>
+                            <constraint firstItem="Bdz-Kf-CoY" firstAttribute="centerY" secondItem="GUa-SI-vS7" secondAttribute="centerY" id="3y6-p4-T7c"/>
+                            <constraint firstItem="T6s-vi-Ezy" firstAttribute="top" secondItem="xmb-OX-bPo" secondAttribute="bottom" constant="8" symbolic="YES" id="41w-BP-qkc"/>
+                            <constraint firstItem="Bdz-Kf-CoY" firstAttribute="top" secondItem="xmb-OX-bPo" secondAttribute="top" id="C7Q-eu-7Om"/>
+                            <constraint firstItem="xmb-OX-bPo" firstAttribute="leading" secondItem="Bdz-Kf-CoY" secondAttribute="trailing" constant="8" symbolic="YES" id="D6Q-bM-cKA"/>
+                            <constraint firstItem="Bdz-Kf-CoY" firstAttribute="top" secondItem="YUa-zI-AHV" secondAttribute="top" constant="20" id="GQz-pJ-IFf"/>
+                            <constraint firstItem="xmb-OX-bPo" firstAttribute="leading" secondItem="T6s-vi-Ezy" secondAttribute="leading" id="NSZ-ws-yPW"/>
+                            <constraint firstItem="Bdz-Kf-CoY" firstAttribute="bottom" secondItem="T6s-vi-Ezy" secondAttribute="bottom" id="dse-Sc-g7j"/>
+                            <constraint firstItem="Bdz-Kf-CoY" firstAttribute="leading" secondItem="YUa-zI-AHV" secondAttribute="leading" constant="20" id="iah-fE-exR"/>
+                            <constraint firstItem="xmb-OX-bPo" firstAttribute="trailing" secondItem="T6s-vi-Ezy" secondAttribute="trailing" id="rLP-ds-Yyh"/>
+                            <constraint firstItem="xmb-OX-bPo" firstAttribute="trailing" secondItem="GUa-SI-vS7" secondAttribute="trailingMargin" id="xaB-Gf-jBq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YUa-zI-AHV"/>
                     </view>
@@ -49,6 +65,11 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.91785663366317749" green="0.96295124292373657" blue="0.9794575572013855" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="imgBook" destination="Bdz-Kf-CoY" id="ykd-em-noX"/>
+                <outlet property="lblAuthor" destination="T6s-vi-Ezy" id="DvO-0D-0JW"/>
+                <outlet property="lblTitle" destination="xmb-OX-bPo" id="4ao-Dc-KrP"/>
+            </connections>
             <point key="canvasLocation" x="39.200000000000003" y="60.26986506746627"/>
         </tableViewCell>
     </objects>
