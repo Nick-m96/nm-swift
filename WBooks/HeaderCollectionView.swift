@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import WolmoCore
 
 class HeaderCollectionView: UICollectionReusableView {
 
+    @IBOutlet weak var lblSuggestion: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        lblSuggestion.text = "LBL_SUGGESTIONS".localized()
     }
     
 }

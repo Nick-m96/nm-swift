@@ -10,4 +10,9 @@ import UIKit
 
 class SuggestionBookCollectionCellCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var imgBook: UIImageView!
+    
+    func setBook(book: UIImage){
+        imgBook.image = book
+    }
 }

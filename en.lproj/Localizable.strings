@@ -17,3 +17,5 @@
 
 /* TEXT FIELD PLACEHOLDER */
 "BOOK_NAME" = "Book\'s name";
+/* HEADER SUGGESTIONS */
+"LBL_SUGGESTIONS" = "Suggestions";
