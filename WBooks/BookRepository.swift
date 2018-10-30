@@ -24,7 +24,6 @@ internal class BookRepository: AbstractRepository {
         return performRequest(method: .get, path: path, parameters: [BookRepository._PathPage: _page])
         {
             decode($0).toResult()
-        }
-        
+        } 
     }
 }

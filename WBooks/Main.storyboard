@@ -13,7 +13,6 @@
         <!--Library View Controller-->
         <scene sceneID="VzD-xV-QG4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ok8-DY-yQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="0zM-Qv-py7" customClass="LibraryViewController" customModule="WBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NY5-Ij-ZhN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -94,6 +93,7 @@
                         <outlet property="tableView" destination="QS7-AE-JGh" id="cb4-tY-rAH"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ok8-DY-yQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="617.39130434782612" y="-45.652173913043484"/>
         </scene>

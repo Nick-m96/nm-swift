@@ -12,5 +12,8 @@
 "NAVIGATION_BAR_TITLE_RENTALS" = "Mis rentas";
 "NAVIGATION_BAR_TITLE_ADDNEW" = "Agregar Nuevo";
 
+"BUTTON_ADD_WISHLIST" = "Añadir a Lista de Deseos";
+"BUTTON_RENT" = "Rentar";
+
 /* TEXT FIELD PLACEHOLDER */
 "BOOK_NAME" = "Nombre del libro";
