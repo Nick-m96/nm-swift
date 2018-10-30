@@ -53,6 +53,7 @@
 		CAD677F4216D249800B2797A /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD677F3216D249800B2797A /* BookRepository.swift */; };
 		CAE68E29217E43A90027CEDD /* BookInfoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE68E28217E43A90027CEDD /* BookInfoDetailView.swift */; };
 		CAF28166218209960016EE1A /* TableBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF28165218209960016EE1A /* TableBookViewController.swift */; };
+		CAF28170218255D30016EE1A /* WBookTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2816F218255D30016EE1A /* WBookTextFieldStyle.swift */; };
 		CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB934DC1D21992100DF75C2 /* Environment.swift */; };
 /* End PBXBuildFile section */
 
@@ -134,6 +135,7 @@
 		CAD677F3216D249800B2797A /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
 		CAE68E28217E43A90027CEDD /* BookInfoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoDetailView.swift; sourceTree = "<group>"; };
 		CAF28165218209960016EE1A /* TableBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBookViewController.swift; sourceTree = "<group>"; };
+		CAF2816F218255D30016EE1A /* WBookTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBookTextFieldStyle.swift; sourceTree = "<group>"; };
 		CEB934DC1D21992100DF75C2 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
 		CED934871E8466A60017CF96 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				CAD15D622180F42400E6FE29 /* BookInfoDetailViewController.swift */,
 				CAF28165218209960016EE1A /* TableBookViewController.swift */,
 				CAD15D5E2180C1C300E6FE29 /* WBookColor.swift */,
+				CAF2816F218255D30016EE1A /* WBookTextFieldStyle.swift */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				CAD15D5F2180C1C300E6FE29 /* WBookColor.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				CAF28166218209960016EE1A /* TableBookViewController.swift in Sources */,
+				CAF28170218255D30016EE1A /* WBookTextFieldStyle.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				CAD49D8F217F873200C985A7 /* RoundedBuuton.swift in Sources */,
 				CAE68E29217E43A90027CEDD /* BookInfoDetailView.swift in Sources */,

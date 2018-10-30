@@ -6,10 +6,14 @@
   Copyright © 2018 Wolox. All rights reserved.
 */
 
-/* LIBRARY VIEW */
+/* NAVIGATION TITLE VIEW */
 "NAVIGATION_BAR_TITLE_LIBRARY" = "Library";
 "NAVIGATION_BAR_TITLE_WISHLIST" = "Wishlist";
 "NAVIGATION_BAR_TITLE_RENTALS" = "My Rentals";
 "NAVIGATION_BAR_TITLE_ADDNEW" = "Add New";
+
 "BUTTON_ADD_WISHLIST" = "Add to Wishlist";
 "BUTTON_RENT" = "Rent";
+
+/* TEXT FIELD PLACEHOLDER */
+"BOOK_NAME" = "Book\'s name";
