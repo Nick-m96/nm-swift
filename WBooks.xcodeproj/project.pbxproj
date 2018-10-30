@@ -39,6 +39,8 @@
 		CA62FB362177A4F800CC4220 /* BookTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA62FB342177A4F800CC4220 /* BookTableCell.xib */; };
 		CA62FB3C2177AE6E00CC4220 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA62FB3B2177AE6E00CC4220 /* Default-568h@2x.png */; };
 		CAB823FB2188B0CA00381DD8 /* SuggestionBookCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB823FA2188B0CA00381DD8 /* SuggestionBookCollectionCell.xib */; };
+		CA9C0F8121878D22001C3FD3 /* ImagePickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C0F8021878D22001C3FD3 /* ImagePickerService.swift */; };
+		CA9C0F84218791A2001C3FD3 /* UIImagePickerControllerSourceTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C0F83218791A2001C3FD3 /* UIImagePickerControllerSourceTypeExtension.swift */; };
 		CAC07DDF216BB5930023B83E /* NetworkingBootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BEC9482117C7AE004338C4 /* NetworkingBootstrapper.swift */; };
 		CAC07DE3216BB9D30023B83E /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1F7A6F1CBED81900E20BE5 /* Nimble.framework */; };
 		CAC07DE4216BB9D60023B83E /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1F7A701CBED81900E20BE5 /* Quick.framework */; };
@@ -135,6 +137,8 @@
 		CA62FB332177A4F800CC4220 /* RentalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsViewController.swift; sourceTree = "<group>"; };
 		CA62FB342177A4F800CC4220 /* BookTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookTableCell.xib; sourceTree = "<group>"; };
 		CA62FB3B2177AE6E00CC4220 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CA9C0F8021878D22001C3FD3 /* ImagePickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerService.swift; sourceTree = "<group>"; };
+		CA9C0F83218791A2001C3FD3 /* UIImagePickerControllerSourceTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerControllerSourceTypeExtension.swift; sourceTree = "<group>"; };
 		CAB823FA2188B0CA00381DD8 /* SuggestionBookCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionBookCollectionCell.xib; sourceTree = "<group>"; };
 		CAD15D5E2180C1C300E6FE29 /* WBookColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBookColor.swift; sourceTree = "<group>"; };
 		CAD15D622180F42400E6FE29 /* BookInfoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoDetailViewController.swift; sourceTree = "<group>"; };
@@ -276,6 +280,7 @@
 				CAF52EA42188CED400BAD934 /* HeaderCollectionView.xib */,
 				CA025F64216CE36800F853E4 /* BookCell.swift */,
 				CA62FB342177A4F800CC4220 /* BookCell.xib */,
+				CAF2816D218249100016EE1A /* AddNewView.swift */,
 				CAF2816B218248C20016EE1A /* AddNewView.xib */,
 				CAF2816D218249100016EE1A /* AddNewView.swift */,
 				CAE68E28217E43A90027CEDD /* BookInfoDetailView.swift */,
@@ -286,6 +291,7 @@
 				CAF28165218209960016EE1A /* TableBookViewController.swift */,
 				CAD15D5E2180C1C300E6FE29 /* WBookColor.swift */,
 				CAF2816F218255D30016EE1A /* WBookTextFieldStyle.swift */,
+				CA9C0F8221879183001C3FD3 /* Utils */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";
@@ -329,6 +335,15 @@
 				9D6E40561CB1B93A008CE558 /* Result.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA9C0F8221879183001C3FD3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CA9C0F8021878D22001C3FD3 /* ImagePickerService.swift */,
+				CA9C0F83218791A2001C3FD3 /* UIImagePickerControllerSourceTypeExtension.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		CEB934DE1D21A44700DF75C2 /* ConfigurationFiles */ = {
@@ -537,6 +552,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9C0F8121878D22001C3FD3 /* ImagePickerService.swift in Sources */,
 				CA62FB302177A37300CC4220 /* AddNewViewController.swift in Sources */,
 				CAD15D5F2180C1C300E6FE29 /* WBookColor.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
@@ -561,6 +577,8 @@
 				CA62FB322177A37300CC4220 /* WishListViewController.swift in Sources */,
 				CA025F65216CE36800F853E4 /* BookTableCell.swift in Sources */,
 				CAF52EA22188B66100BAD934 /* SuggestionCollectionViewController.swift in Sources */,
+				CA9C0F84218791A2001C3FD3 /* UIImagePickerControllerSourceTypeExtension.swift in Sources */,
+				CA025F65216CE36800F853E4 /* BookCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

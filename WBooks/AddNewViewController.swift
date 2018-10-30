@@ -8,6 +8,8 @@
 
 import UIKit
 import WolmoCore
+import ReactiveCocoa
+import ReactiveSwift
 
 class AddNewViewController: UIViewController {
     
@@ -16,7 +18,7 @@ class AddNewViewController: UIViewController {
         navigationItem.title = "NAVIGATION_BAR_TITLE_ADDNEW".localized()
         view.backgroundColor = WBookColor.background
     }
-    
+
     override func loadView() {
         super.loadView()
         let addNewVM = AddNewView.loadFromNib()! as AddNewView
@@ -24,6 +26,13 @@ class AddNewViewController: UIViewController {
         setViewStyle(addNewVM)
         view.addSubview(addNewVM)
         setConstraints(addNewVM)
+        
+        let action = MediaPickerService.init(viewController: self, allowsEditing: false)
+        action.presentImagePickerController(from: UIImagePickerControllerSourceType.camera, for: [MediaPickerMediaType.image]) {
+            
+        }
+        
+        addNewVM.imgBook.reactive.pressed = CocoaAction(action)
     }
     
     fileprivate func setViewStyle(_ addNewVM: AddNewView) {
