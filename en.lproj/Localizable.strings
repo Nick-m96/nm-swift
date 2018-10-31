@@ -14,7 +14,8 @@
 
 /* BUTTON TEXT */
 "BTN_SUBMIT" = "Submit";
-
+"BUTTON_ADD_WISHLIST" = "Add to Wishlist";
+"BUTTON_RENT" = "Rent";
 
 /* TEXT FIELD PLACEHOLDER */
 "BOOK_NAME_PLACEHOLDER" = "Book\'s name";

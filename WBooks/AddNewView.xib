@@ -19,8 +19,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhf-JB-4ME">
                     <rect key="frame" x="0.0" y="0.0" width="317" height="419"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NBN-lM-Goq">
-                            <rect key="frame" x="20" y="20" width="277" height="368"/>
+                        <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NBN-lM-Goq">
+                            <rect key="frame" x="20" y="20" width="277" height="379"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="k0F-t1-uOi">
                                     <rect key="frame" x="0.0" y="0.0" width="277" height="100"/>
@@ -35,35 +35,35 @@
                                         </button>
                                     </subviews>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="EMS-nl-Xj6">
-                                    <rect key="frame" x="0.0" y="120" width="277" height="198"/>
+                                <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="EMS-nl-Xj6">
+                                    <rect key="frame" x="0.0" y="121.5" width="277" height="206"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y88-IU-yk0" userLabel="txtBookName">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y88-IU-yk0" userLabel="txtBookName" customClass="WBookTextFieldStyle" customModule="WBooks" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="277" height="30"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eRh-l2-jUa">
-                                            <rect key="frame" x="0.0" y="42" width="277" height="30"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eRh-l2-jUa" customClass="WBookTextFieldStyle" customModule="WBooks" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="44" width="277" height="30"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4no-OY-qgK">
-                                            <rect key="frame" x="0.0" y="84" width="277" height="30"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4no-OY-qgK" customClass="WBookTextFieldStyle" customModule="WBooks" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="88" width="277" height="30"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ltp-wM-je4">
-                                            <rect key="frame" x="0.0" y="126" width="277" height="30"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ltp-wM-je4" customClass="WBookTextFieldStyle" customModule="WBooks" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="132" width="277" height="30"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8r6-WZ-Ius" userLabel="Txt Description">
-                                            <rect key="frame" x="0.0" y="168" width="277" height="30"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8r6-WZ-Ius" userLabel="Txt Description" customClass="WBookTextFieldStyle" customModule="WBooks" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="176" width="277" height="30"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -71,9 +71,9 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="G2F-sS-YpL">
-                                    <rect key="frame" x="0.0" y="338" width="277" height="30"/>
+                                    <rect key="frame" x="0.0" y="349" width="277" height="30"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkR-Dh-cnh">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkR-Dh-cnh" customClass="GradientButton" customModule="WBooks" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="277" height="30"/>
                                             <state key="normal" title="Button"/>
                                         </button>
@@ -84,6 +84,7 @@
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="NBN-lM-Goq" secondAttribute="trailing" constant="20" id="HHb-P3-edU"/>
+                        <constraint firstAttribute="bottom" secondItem="NBN-lM-Goq" secondAttribute="bottom" constant="20" id="IuO-BO-Uaa"/>
                         <constraint firstItem="NBN-lM-Goq" firstAttribute="leading" secondItem="yhf-JB-4ME" secondAttribute="leading" constant="20" id="eRU-MH-kLe"/>
                         <constraint firstItem="NBN-lM-Goq" firstAttribute="top" secondItem="yhf-JB-4ME" secondAttribute="top" constant="20" id="j80-0o-wXV"/>
                     </constraints>

@@ -20,7 +20,7 @@ class AddNewView: UIScrollView, NibLoadable{
     @IBOutlet weak var btnSubmit: UIButton!
     @IBOutlet weak var imgBook: UIButton!
     
-    func setupText(){
+    override func awakeFromNib() {
         btnSubmit.setTitle("BTN_SUBMIT".localized(), for: .normal)
         txtBookName.placeholder = "BOOK_NAME_PLACEHOLDER".localized()
         txtAuthor.placeholder = "AUTHOR_PLACEHOLDER".localized()

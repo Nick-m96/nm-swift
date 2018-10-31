@@ -12,16 +12,17 @@ import WolmoCore
 class GradientButton: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = 20
+        layer.cornerRadius = 15
         layer.masksToBounds = true
-        setGradient()
+        tintColor = UIColor.white
+        setEnable()
     }
     
-    func setGradient(){
+    func setEnable(){
         self.gradient = ViewGradient(colors: [WBookColor.gradientLeft, WBookColor.gradientRight], direction: GradientDirection.leftToRight)
     }
     
-    func setNoGradient(){
+    func setDisable(){
         self.gradient = ViewGradient(colors: [UIColor.gray, UIColor.gray], direction: GradientDirection.leftToRight)
     }
 }

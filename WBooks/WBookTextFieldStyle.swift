@@ -13,7 +13,6 @@ class WBookTextFieldStyle: UITextField {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        placeholder = "BOOK_NAME".localized()
         borderStyle = .none
         layer.backgroundColor = UIColor.white.cgColor
         layer.masksToBounds = false
