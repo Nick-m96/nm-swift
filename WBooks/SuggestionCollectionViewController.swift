@@ -11,8 +11,6 @@ import WolmoCore
 import Foundation
 import Networking
 
-private let reuseIdentifier = "Cell"
-
 class SuggestionCollectionViewController: UICollectionViewController {
     
     private let _image = UIImage(named: "book")
@@ -39,5 +37,15 @@ class SuggestionCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: _BookCell, for: indexPath) as! SuggestionBookCollectionCellCollectionViewCell
         cell.setBook(book: _image!)
         return cell
+    }
+    
+    func setConstraints(_ view : UIView) {
+        collectionView!.translatesAutoresizingMaskIntoConstraints = false
+        let hor = collectionView!.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        let botton = collectionView!.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
+        let height = collectionView!.heightAnchor.constraint(equalToConstant: 80)
+        let wid = collectionView!.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30)
+        
+        view.addConstraints([hor, botton, wid, height])
     }
 }
