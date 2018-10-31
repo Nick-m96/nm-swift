@@ -9,7 +9,7 @@
 import UIKit
 
 class BookInfoDetailViewController: UIViewController {
-    let bookDetail = BookInfoDetailView.loadFromNib()! as BookInfoDetailView
+    let bookDetailView = BookInfoDetailView.loadFromNib()! as BookInfoDetailView
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,16 +17,15 @@ class BookInfoDetailViewController: UIViewController {
     }
     
     fileprivate func setConstraints() {
-        bookDetail.translatesAutoresizingMaskIntoConstraints = false
-        bookDetail.topAnchor.constraint(equalTo: view.topAnchor, constant: navigationController!.navigationBar.frame.size.height).isActive = true
-        bookDetail.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        bookDetail.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-        bookDetail.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 10).isActive = true
+        bookDetailView.translatesAutoresizingMaskIntoConstraints = false
+        bookDetailView.topAnchor.constraint(equalTo: view.topAnchor, constant: navigationController!.navigationBar.frame.size.height + 10).isActive = true
+        bookDetailView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        bookDetailView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: 10).isActive = true
     }
     
     override func loadView() {
         super.loadView()
-        view.addSubview(self.bookDetail)
+        view.addSubview(bookDetailView)
         setConstraints()
     }
 }
