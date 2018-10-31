@@ -21,7 +21,7 @@ final class TableBookViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "BookCell")
+        tableView.register(UINib(nibName: "BookTableCell", bundle: nil), forCellReuseIdentifier: "BookTableCell")
         setTableBackground()
         loadBooks()
     }
@@ -58,8 +58,8 @@ extension TableBookViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let book = _bookArray[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath) as! BookCell
-        cell.setText(book: book)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookTableCell", for: indexPath) as! BookTableCell
+        cell.setBook(book: book)
         if indexPath.row == _bookArray.count - 1 { // last cell
             loadBooks()
         }

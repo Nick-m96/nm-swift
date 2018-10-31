@@ -13,6 +13,11 @@ class BookTableCell: UITableViewCell {
     @IBOutlet weak var imgBook: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblAuthor: UILabel!
+    @IBOutlet weak var view: UIView!
+    
+    override func awakeFromNib() {
+        view.layer.cornerRadius = 10
+    }
     
     func setBook(book: Book){
         lblTitle.text = book.title
