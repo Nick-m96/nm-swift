@@ -45,7 +45,7 @@ final class TableBookViewController: UITableViewController {
     }
     
     func setTableBackground(){
-        tableView.backgroundColor = WBookColor.wBooksBackground
+        tableView.backgroundColor = WBookColor.background
         tableView.separatorStyle = .none
     }
 }
@@ -60,11 +60,9 @@ extension TableBookViewController{
         let book = _bookArray[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath) as! BookCell
         cell.setText(book: book)
-        
         if indexPath.row == _bookArray.count - 1 { // last cell
             loadBooks()
         }
-        
         return cell
     }
     

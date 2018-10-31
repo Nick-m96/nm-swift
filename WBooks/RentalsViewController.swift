@@ -16,6 +16,7 @@ class RentalsViewController: UIViewController {
      
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = WBookColor.background
         navigationItem.title = "NAVIGATION_BAR_TITLE_RENTALS".localized()
         let tableBookVC = TableBookViewController()
         self.addChildViewController(tableBookVC)
