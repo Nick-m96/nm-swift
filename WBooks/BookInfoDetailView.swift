@@ -40,6 +40,7 @@ class BookInfoDetailView: UIView, NibLoadable {
             }
             catch{print("error")}
         }
+        
     }
     
     func setConstraints(_ view: UIView,_ top : CGFloat) {

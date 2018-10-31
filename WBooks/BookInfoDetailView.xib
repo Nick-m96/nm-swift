@@ -98,12 +98,14 @@
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" red="0.59384782570000005" green="0.98836263020000004" blue="0.44877623150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="237" id="867-uI-2H2"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hp7-SC-8yG" secondAttribute="trailing" constant="20" id="1Ce-NR-ebk"/>
-                <constraint firstItem="hp7-SC-8yG" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="2P2-sf-hq0"/>
                 <constraint firstItem="hp7-SC-8yG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5aZ-ZO-JmL"/>
                 <constraint firstItem="hp7-SC-8yG" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="71U-Np-Clx"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hp7-SC-8yG" secondAttribute="bottom" constant="10" id="W11-qh-De4"/>
@@ -123,7 +125,7 @@
                 <outlet property="btnAddWishlist" destination="TLl-L0-KsF" id="YdY-On-Qom"/>
                 <outlet property="btnRent" destination="5Tz-Mp-Nja" id="cCF-BE-jER"/>
             </connections>
-            <point key="canvasLocation" x="136.80000000000001" y="3.1484257871064472"/>
+            <point key="canvasLocation" x="136.80000000000001" y="15.742128935532236"/>
         </view>
     </objects>
 </document>
