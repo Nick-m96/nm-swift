@@ -19,7 +19,17 @@ class RentalsViewController: UIViewController {
         view.backgroundColor = WBookColor.background
         navigationItem.title = "NAVIGATION_BAR_TITLE_RENTALS".localized()
         view.backgroundColor = UIColor(red: 234/255, green: 246/255, blue: 250/255, alpha: 1)
-        
+        setCollectionBookVC()
+        setHeaderCollection()
+    }
+    
+    private func setHeaderCollection(){
+        let header = HeaderCollectionView.loadFromNib()! as HeaderCollectionView
+        view.addSubview(header)
+        setConstraints(header, 37, -120)
+    }
+
+    private func setCollectionBookVC(){
         let collectionBookVC = SuggestionCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
         self.addChildViewController(collectionBookVC)
         view.addSubview(collectionBookVC.collectionView!)
@@ -30,12 +40,12 @@ class RentalsViewController: UIViewController {
         tableBookVC.didSelectedEnable = true
     }
     
-    fileprivate func setConstraints(_ collectionV: UICollectionView) {
-        collectionV.translatesAutoresizingMaskIntoConstraints = false
-        let hor = collectionV.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        let botton = collectionV.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
-        let height = collectionV.heightAnchor.constraint(equalToConstant: 80)
-        let wid = collectionV.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -40)
+    fileprivate func setConstraints(_ viewSet: UIView, _ height: CGFloat, _ botton: CGFloat) {
+        viewSet.translatesAutoresizingMaskIntoConstraints = false
+        let hor = viewSet.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        let botton = viewSet.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: botton)
+        let height = viewSet.heightAnchor.constraint(equalToConstant: height)
+        let wid = viewSet.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -40)
         
         view.addConstraints([hor, botton, wid, height])
     }
