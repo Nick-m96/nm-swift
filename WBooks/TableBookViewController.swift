@@ -21,7 +21,7 @@ final class TableBookViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "BookCell")
+        tableView.register(UINib(nibName: "BookTableCell", bundle: nil), forCellReuseIdentifier: "BookTableCell")
         setTableBackground()
         loadBooks()
     }
@@ -58,8 +58,8 @@ extension TableBookViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let book = _bookArray[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath) as! BookCell
-        cell.setText(book: book)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookTableCell", for: indexPath) as! BookTableCell
+        cell.setBook(book: book)
         if indexPath.row == _bookArray.count - 1 { // last cell
             loadBooks()
         }
@@ -78,5 +78,20 @@ extension TableBookViewController{
             
             self.navigationController?.pushViewController(BookDetailVC, animated: true)
         }
+    }
+}
+
+extension TableBookViewController{
+    func setConstraints(_ view : UIView) {
+        guard let tableView = tableView else {
+            return
+        }
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        let hor = tableView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        let botton = tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -160)
+        let height = tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 30)
+        let wid = tableView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30)
+        
+        view.addConstraints([hor, botton, wid, height])
     }
 }
