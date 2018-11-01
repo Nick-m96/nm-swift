@@ -32,10 +32,11 @@
 		CA1632272177B8B3005A6A77 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA1632292177B8B3005A6A77 /* Localizable.strings */; };
 		CA1BF7F3218B30CC0020A861 /* HeaderCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1BF7F2218B30CC0020A861 /* HeaderCollectionView.xib */; };
 		CA1BF7F5218B31750020A861 /* HeaderCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1BF7F4218B31750020A861 /* HeaderCollectionView.swift */; };
-		CA1BF7F8218B488D0020A861 /* ComentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1BF7F6218B488D0020A861 /* ComentTableViewCell.swift */; };
-		CA1BF7F9218B488D0020A861 /* ComentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1BF7F7218B488D0020A861 /* ComentTableViewCell.xib */; };
+		CA1BF7F8218B488D0020A861 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1BF7F6218B488D0020A861 /* CommentTableViewCell.swift */; };
+		CA1BF7F9218B488D0020A861 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1BF7F7218B488D0020A861 /* CommentTableViewCell.xib */; };
 		CA1BF7FB218B4B3A0020A861 /* UserComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1BF7FA218B4B3A0020A861 /* UserComment.swift */; };
 		CA1BF7FD218B4F8B0020A861 /* CommentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1BF7FC218B4F8B0020A861 /* CommentRepository.swift */; };
+		CA1BF801218B57F00020A861 /* CommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1BF800218B57F00020A861 /* CommentTableViewController.swift */; };
 		CA4C9176217E184500762388 /* BookInfoDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4C9175217E184500762388 /* BookInfoDetailView.xib */; };
 		CA62FB2F2177A37300CC4220 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62FB2B2177A37200CC4220 /* LibraryViewController.swift */; };
 		CA62FB302177A37300CC4220 /* AddNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62FB2C2177A37200CC4220 /* AddNewViewController.swift */; };
@@ -132,10 +133,11 @@
 		CA16322B2177B8BE005A6A77 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CA1BF7F2218B30CC0020A861 /* HeaderCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionView.xib; sourceTree = "<group>"; };
 		CA1BF7F4218B31750020A861 /* HeaderCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionView.swift; sourceTree = "<group>"; };
-		CA1BF7F6218B488D0020A861 /* ComentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComentTableViewCell.swift; sourceTree = "<group>"; };
-		CA1BF7F7218B488D0020A861 /* ComentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComentTableViewCell.xib; sourceTree = "<group>"; };
+		CA1BF7F6218B488D0020A861 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		CA1BF7F7218B488D0020A861 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		CA1BF7FA218B4B3A0020A861 /* UserComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserComment.swift; sourceTree = "<group>"; };
 		CA1BF7FC218B4F8B0020A861 /* CommentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRepository.swift; sourceTree = "<group>"; };
+		CA1BF800218B57F00020A861 /* CommentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewController.swift; sourceTree = "<group>"; };
 		CA4C9175217E184500762388 /* BookInfoDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookInfoDetailView.xib; sourceTree = "<group>"; };
 		CA62FB2B2177A37200CC4220 /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		CA62FB2C2177A37200CC4220 /* AddNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewViewController.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				CA1BF7FE218B51660020A861 /* Views */,
 				46BEC9472117C7A3004338C4 /* Bootstrappers */,
 				46BEC93F2117C704004338C4 /* Models */,
+				CA1BF802218B57F90020A861 /* Utils */,
 				46BEC93C2117C6DF004338C4 /* Repositories */,
 				CEB934DE1D21A44700DF75C2 /* ConfigurationFiles */,
 				9D15750B1CB1B27500EA395E /* Assets.xcassets */,
@@ -293,10 +296,7 @@
 				CAD49D90217F88E700C985A7 /* GradientButton.swift */,
 				CAD15D622180F42400E6FE29 /* BookInfoDetailViewController.swift */,
 				CAF28165218209960016EE1A /* TableBookViewController.swift */,
-				CAD15D5E2180C1C300E6FE29 /* WBookColor.swift */,
-				CAD49D8E217F873200C985A7 /* RoundedBuuton.swift */,
-				CAD49D90217F88E700C985A7 /* GradientButton.swift */,
-				CAF2816F218255D30016EE1A /* WBookTextFieldStyle.swift */,
+				CA1BF800218B57F00020A861 /* CommentTableViewController.swift */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";
@@ -350,10 +350,21 @@
 				CA4C9175217E184500762388 /* BookInfoDetailView.xib */,
 				CA1BF7F2218B30CC0020A861 /* HeaderCollectionView.xib */,
 				CA1BF7F4218B31750020A861 /* HeaderCollectionView.swift */,
-				CA1BF7F6218B488D0020A861 /* ComentTableViewCell.swift */,
-				CA1BF7F7218B488D0020A861 /* ComentTableViewCell.xib */,
+				CA1BF7F6218B488D0020A861 /* CommentTableViewCell.swift */,
+				CA1BF7F7218B488D0020A861 /* CommentTableViewCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CA1BF802218B57F90020A861 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CAD15D5E2180C1C300E6FE29 /* WBookColor.swift */,
+				CAD49D8E217F873200C985A7 /* RoundedBuuton.swift */,
+				CAD49D90217F88E700C985A7 /* GradientButton.swift */,
+				CAF2816F218255D30016EE1A /* WBookTextFieldStyle.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		CEB934DE1D21A44700DF75C2 /* ConfigurationFiles */ = {
@@ -479,7 +490,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA1BF7F9218B488D0020A861 /* ComentTableViewCell.xib in Resources */,
+				CA1BF7F9218B488D0020A861 /* CommentTableViewCell.xib in Resources */,
 				CA4C9176217E184500762388 /* BookInfoDetailView.xib in Resources */,
 				CA1BF7F3218B30CC0020A861 /* HeaderCollectionView.xib in Resources */,
 				CA025F61216CE35800F853E4 /* Main.storyboard in Resources */,
@@ -577,7 +588,7 @@
 				CAF52EA52188CED400BAD934 /* HeaderCollectionView.swift in Sources */,
 				CA025F5F216CE33900F853E4 /* Book.swift in Sources */,
 				CA1BF7F5218B31750020A861 /* HeaderCollectionView.swift in Sources */,
-				CA1BF7F8218B488D0020A861 /* ComentTableViewCell.swift in Sources */,
+				CA1BF7F8218B488D0020A861 /* CommentTableViewCell.swift in Sources */,
 				CA62FB352177A4F800CC4220 /* RentalsViewController.swift in Sources */,
 				46BEC94B2117DA4E004338C4 /* AuthUser.swift in Sources */,
 				CAD49D91217F88E700C985A7 /* GradientButton.swift in Sources */,
@@ -587,6 +598,8 @@
 				CAC07DDF216BB5930023B83E /* NetworkingBootstrapper.swift in Sources */,
 				CA62FB312177A37300CC4220 /* MainTabBarViewController.swift in Sources */,
 				CA62FB322177A37300CC4220 /* WishListViewController.swift in Sources */,
+				CA1BF801218B57F00020A861 /* CommentTableViewController.swift in Sources */,
+				CA025F65216CE36800F853E4 /* BookCell.swift in Sources */,
 				CA025F65216CE36800F853E4 /* BookTableCell.swift in Sources */,
 				CAF52EA22188B66100BAD934 /* SuggestionCollectionViewController.swift in Sources */,
 			);

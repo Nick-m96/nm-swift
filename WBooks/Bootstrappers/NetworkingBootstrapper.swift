@@ -47,8 +47,8 @@ class NetworkingBootstrapper {
         return repository
     }
     
-    func fetchUsersComents() -> CommentRepository{
-        let comments = CommentRepository(
+    func createUserCommentRepository() -> CommentRepository{
+        let repository = CommentRepository(
             networkingConfiguration: networkingConfiguration,
             sessionManager: _sessionManager)
         
