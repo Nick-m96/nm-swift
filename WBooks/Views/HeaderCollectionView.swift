@@ -20,11 +20,17 @@ class HeaderCollectionView: UICollectionReusableView, NibLoadable {
     func setConstraints(_ viewSet: UIView,_ top : CGFloat) {
         translatesAutoresizingMaskIntoConstraints = false
         let hor = centerXAnchor.constraint(equalTo: viewSet.centerXAnchor)
-        let top = topAnchor.constraint(equalTo: viewSet.topAnchor, constant: top)
-//        let botton = bottomAnchor.constraint(equalTo: viewSet.bottomAnchor, constant: bottom)//-120 para la vista de rentas
+        var up : NSLayoutConstraint
+        if top < (0 as CGFloat) {
+            up = bottomAnchor.constraint(equalTo: viewSet.bottomAnchor, constant: top)
+        }
+        else{
+            up = topAnchor.constraint(equalTo: viewSet.topAnchor, constant: top)
+        }
+            
         let height = heightAnchor.constraint(equalToConstant: _height)
         let wid = widthAnchor.constraint(equalTo: viewSet.widthAnchor, constant: _width)
         
-        viewSet.addConstraints([hor, top, wid, height])
+        viewSet.addConstraints([hor, up, wid, height])
     }
 }

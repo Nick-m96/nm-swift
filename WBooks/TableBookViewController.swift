@@ -74,7 +74,7 @@ extension TableBookViewController{
         if didSelectedEnable{
             let book = _bookArray[indexPath.row]
             let BookDetailVC = BookInfoDetailViewController()
-            BookDetailVC.bookDetailView.setupTexts(book: book)
+            BookDetailVC.scrollView.bookDetailView.setupTexts(book: book)
             
             navigationController?.pushViewController(BookDetailVC, animated: true)
         }

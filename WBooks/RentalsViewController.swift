@@ -28,7 +28,7 @@ class RentalsViewController: UIViewController {
     
     private func setHeaderCollection(){
         view.addSubview(_header)
-        _header.setConstraints(view)
+        _header.setConstraints(view, -120)
     }
 
     private func setCollectionBookVC(){
