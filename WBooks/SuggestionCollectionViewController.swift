@@ -19,14 +19,17 @@ class SuggestionCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView!.register(UINib(nibName: "SuggestionBookCollectionCell", bundle: nil), forCellWithReuseIdentifier: _BookCell)
-        collectionView?.backgroundColor = UIColor.clear
+        guard let collectionView = collectionView else {
+            return
+        }
+        collectionView.register(UINib(nibName: "SuggestionBookCollectionCell", bundle: nil), forCellWithReuseIdentifier: _BookCell)
+        collectionView.backgroundColor = UIColor.clear
     
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.itemSize = CGSize(width: 60, height: 80)
         flowLayout.scrollDirection = .horizontal
         flowLayout.minimumInteritemSpacing = 0.0
-        collectionView?.collectionViewLayout = flowLayout
+        collectionView.collectionViewLayout = flowLayout
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -40,12 +43,15 @@ class SuggestionCollectionViewController: UICollectionViewController {
     }
     
     func setConstraints(_ view : UIView) {
-        collectionView!.translatesAutoresizingMaskIntoConstraints = false
-        let hor = collectionView!.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        let botton = collectionView!.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
-        let height = collectionView!.heightAnchor.constraint(equalToConstant: 80)
-        let wid = collectionView!.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30)
+        guard let collectionView = collectionView else {
+            return
+        }
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        let hor = collectionView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        let botton = collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
+        let height = collectionView.heightAnchor.constraint(equalToConstant: 80)
+        let wid = collectionView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30)
         
-        view.addConstraints([hor, botton, wid, height])
+        view.addConstraints([hor, botton, height, wid])
     }
 }

@@ -83,11 +83,14 @@ extension TableBookViewController{
 
 extension TableBookViewController{
     func setConstraints(_ view : UIView) {
-        tableView!.translatesAutoresizingMaskIntoConstraints = false
-        let hor = tableView!.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        let botton = tableView!.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -160)
-        let height = tableView!.topAnchor.constraint(equalTo: view.topAnchor, constant: 30)
-        let wid = tableView!.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30)
+        guard let tableView = tableView else {
+            return
+        }
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        let hor = tableView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        let botton = tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -160)
+        let height = tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 30)
+        let wid = tableView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30)
         
         view.addConstraints([hor, botton, wid, height])
     }
