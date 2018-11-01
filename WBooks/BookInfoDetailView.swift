@@ -19,10 +19,13 @@ class BookInfoDetailView: UIView, NibLoadable {
     @IBOutlet weak var bookAuthor: UILabel!
     @IBOutlet weak var bookYear: UILabel!
     @IBOutlet weak var bookGenre: UILabel!
+    private let _height : CGFloat = 250
     
     override func awakeFromNib() {
         btnRent.setTitle("BUTTON_RENT".localized(), for: .normal)
         btnAddWishlist.setTitle("BUTTON_ADD_WISHLIST".localized(), for: .normal)
+        backgroundColor = UIColor.white
+        layer.cornerRadius = 10
     }
     
     func setupTexts(book : Book){
@@ -34,10 +37,18 @@ class BookInfoDetailView: UIView, NibLoadable {
             do{
                 try
                 bookImage.image = UIImage(data: Data(contentsOf: URL(string: imageURL)!))
-                
             }
             catch{print("error")}
         }
+    }
+    
+    func setConstraints(_ view: UIView,_ top : CGFloat) {
+        translatesAutoresizingMaskIntoConstraints = false
+        let hor = centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        let top = topAnchor.constraint(equalTo: view.topAnchor, constant: top)
+        let height = heightAnchor.constraint(equalToConstant: _height)
+        let wid = widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30)
         
+        view.addConstraints([hor, top, wid, height])
     }
 }

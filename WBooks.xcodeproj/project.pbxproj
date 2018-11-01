@@ -30,6 +30,8 @@
 		CA025F61216CE35800F853E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA025F60216CE35800F853E4 /* Main.storyboard */; };
 		CA025F65216CE36800F853E4 /* BookTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA025F64216CE36800F853E4 /* BookTableCell.swift */; };
 		CA1632272177B8B3005A6A77 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA1632292177B8B3005A6A77 /* Localizable.strings */; };
+		CA1BF7F3218B30CC0020A861 /* HeaderCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1BF7F2218B30CC0020A861 /* HeaderCollectionView.xib */; };
+		CA1BF7F5218B31750020A861 /* HeaderCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1BF7F4218B31750020A861 /* HeaderCollectionView.swift */; };
 		CA4C9176217E184500762388 /* BookInfoDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4C9175217E184500762388 /* BookInfoDetailView.xib */; };
 		CA62FB2F2177A37300CC4220 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62FB2B2177A37200CC4220 /* LibraryViewController.swift */; };
 		CA62FB302177A37300CC4220 /* AddNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62FB2C2177A37200CC4220 /* AddNewViewController.swift */; };
@@ -112,7 +114,6 @@
 		9D1575101CB1B27500EA395E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D1575151CB1B27500EA395E /* WBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575191CB1B27500EA395E /* WBooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksTests.swift; sourceTree = "<group>"; };
-		9D15751B1CB1B27500EA395E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D1575201CB1B27500EA395E /* WBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575241CB1B27500EA395E /* WBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksUITests.swift; sourceTree = "<group>"; };
 		9D1575261CB1B27500EA395E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,6 +126,8 @@
 		CA025F64216CE36800F853E4 /* BookTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableCell.swift; sourceTree = "<group>"; };
 		CA1632282177B8B3005A6A77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CA16322B2177B8BE005A6A77 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CA1BF7F2218B30CC0020A861 /* HeaderCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionView.xib; sourceTree = "<group>"; };
+		CA1BF7F4218B31750020A861 /* HeaderCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionView.swift; sourceTree = "<group>"; };
 		CA4C9175217E184500762388 /* BookInfoDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookInfoDetailView.xib; sourceTree = "<group>"; };
 		CA62FB2B2177A37200CC4220 /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		CA62FB2C2177A37200CC4220 /* AddNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +234,7 @@
 				9D1575031CB1B27500EA395E /* WBooks */,
 				9D1575231CB1B27500EA395E /* WBooksUITests */,
 				9D1575021CB1B27500EA395E /* Products */,
+				CA1BF7F1218B2C710020A861 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -280,17 +284,10 @@
 				CAF28165218209960016EE1A /* TableBookViewController.swift */,
 				CAD15D5E2180C1C300E6FE29 /* WBookColor.swift */,
 				CAF2816F218255D30016EE1A /* WBookTextFieldStyle.swift */,
+				CA1BF7F2218B30CC0020A861 /* HeaderCollectionView.xib */,
+				CA1BF7F4218B31750020A861 /* HeaderCollectionView.swift */,
 			);
 			path = WBooks;
-			sourceTree = "<group>";
-		};
-		9D1575181CB1B27500EA395E /* WBooksTests */ = {
-			isa = PBXGroup;
-			children = (
-				9D1575191CB1B27500EA395E /* WBooksTests.swift */,
-				9D15751B1CB1B27500EA395E /* Info.plist */,
-			);
-			path = WBooksTests;
 			sourceTree = "<group>";
 		};
 		9D1575231CB1B27500EA395E /* WBooksUITests */ = {
@@ -323,6 +320,14 @@
 				9D6E40561CB1B93A008CE558 /* Result.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA1BF7F1218B2C710020A861 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				9D1575191CB1B27500EA395E /* WBooksTests.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		CEB934DE1D21A44700DF75C2 /* ConfigurationFiles */ = {
@@ -449,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA4C9176217E184500762388 /* BookInfoDetailView.xib in Resources */,
+				CA1BF7F3218B30CC0020A861 /* HeaderCollectionView.xib in Resources */,
 				CA025F61216CE35800F853E4 /* Main.storyboard in Resources */,
 				CAF52EA62188CED400BAD934 /* HeaderCollectionView.xib in Resources */,
 				CAB823FB2188B0CA00381DD8 /* SuggestionBookCollectionCell.xib in Resources */,
@@ -541,6 +547,7 @@
 				CAD677F4216D249800B2797A /* BookRepository.swift in Sources */,
 				CAF52EA52188CED400BAD934 /* HeaderCollectionView.swift in Sources */,
 				CA025F5F216CE33900F853E4 /* Book.swift in Sources */,
+				CA1BF7F5218B31750020A861 /* HeaderCollectionView.swift in Sources */,
 				CA62FB352177A4F800CC4220 /* RentalsViewController.swift in Sources */,
 				46BEC94B2117DA4E004338C4 /* AuthUser.swift in Sources */,
 				CAD49D91217F88E700C985A7 /* GradientButton.swift in Sources */,
