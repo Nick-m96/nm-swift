@@ -40,7 +40,16 @@ class BookInfoDetailView: UIView, NibLoadable {
             }
             catch{print("error")}
         }
+    }
+    
+    func setConstraints(_ view: UIView,_ top : CGFloat) {
+        translatesAutoresizingMaskIntoConstraints = false
+        let hor = centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        let top = topAnchor.constraint(equalTo: view.topAnchor, constant: top)
+        let height = heightAnchor.constraint(equalToConstant: _height)
+        let wid = widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30)
         
+        view.addConstraints([hor, top, wid, height])
     }
     
     func setConstraints(_ view: UIView,_ top : CGFloat) {
