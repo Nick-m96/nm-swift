@@ -20,7 +20,6 @@ class BookInfoDetailViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = WBookColor.background
         navigationItem.title = "NAVIGATION_BAR_TITLE_BOOKDETAIL".localized()
-//        navigationItem.backBarButtonItem?.
     }
     
     override func loadView() {
