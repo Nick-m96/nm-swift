@@ -22,7 +22,7 @@ class BookDetailScrollView: UIScrollView, NibLoadable {
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = WBookColor.background
-        contentSize.height = 1100
+        contentSize.height = 1200
         
         addSubview(collectionBookVC.collectionView!)
         addSubview(bookDetailView)
@@ -35,9 +35,9 @@ class BookDetailScrollView: UIScrollView, NibLoadable {
         bookDetailView.setConstraints(self, 50)
     }
     
-    func getBook(book: Book) {
-        bookDetailView.setupTexts(book: book)
-        tableCommentVC.setBook(book)
+    func setBook(_ book: Book) {
+        bookDetailView.setupTexts(book)
+        tableCommentVC.setBookID(book.id)
     }
     
     func setConstraints(_ view: UIView) {

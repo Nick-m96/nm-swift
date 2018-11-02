@@ -28,7 +28,7 @@ class BookInfoDetailView: UIView, NibLoadable {
         layer.cornerRadius = 10
     }
     
-    func setupTexts(book : Book){
+    func setupTexts(_ book : Book){
         bookTitle.text = book.title
         bookAuthor.text = book.author
         bookYear.text = book.year
