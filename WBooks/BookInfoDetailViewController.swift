@@ -13,26 +13,18 @@ import UIKit
 import WolmoCore
 
 class BookInfoDetailViewController: UIViewController {
-//    let bookDetailView = BookInfoDetailView.loadFromNib()! as BookInfoDetailView
-//    let headerCollectionView = HeaderCollectionView.loadFromNib()! as HeaderCollectionView
-//    let tableCommentVC = CommentTableViewController()
+
     let scrollView = BookDetailScrollView.loadFromNib()! as BookDetailScrollView
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = WBookColor.background
+        navigationItem.title = "NAVIGATION_BAR_TITLE_BOOKDETAIL".localized()
+//        navigationItem.backBarButtonItem?.
     }
     
     override func loadView() {
         super.loadView()
-//        self.addChildViewController(tableCommentVC)
-//        view.addSubview(bookDetailView)
-//        view.addSubview(headerCollectionView)
-//        view.addSubview(tableCommentVC.tableView)
-//
-//        tableCommentVC.setConstraints(view, 370)
-//        headerCollectionView.setConstraints(view, 330)
-//        bookDetailView.setConstraints(view, 80)
         view.addSubview(scrollView)
         scrollView.setConstraints(view)
     }

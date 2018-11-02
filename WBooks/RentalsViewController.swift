@@ -35,7 +35,7 @@ class RentalsViewController: UIViewController {
         let collectionBookVC = SuggestionCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
         self.addChildViewController(collectionBookVC)
         view.addSubview(collectionBookVC.collectionView!)
-        collectionBookVC.setConstraints(view)
+        collectionBookVC.setConstraints(view, -40)
 
     }
     

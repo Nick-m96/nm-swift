@@ -14,18 +14,26 @@ import WolmoCore
 
 class CommentTableViewController: UITableViewController {
 
+    var book : Book?
     private let _commentRepo = NetworkingBootstrapper.shared.createUserCommentRepository()
     private var _commentsArray = [UserComment]()
+    private let _cellSize : CGFloat = 140
+    private var _rows : Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "CommentTableViewCell", bundle: nil), forCellReuseIdentifier: "CommentTableViewCell")
         setTableBackground()
+        
+    }
+    
+    func setBook(_ book : Book){
+        self.book = book
         loadBooks()
     }
     
     func loadBooks(){
-        _commentRepo.fetchComments().observe(on: UIScheduler()).startWithResult{
+        _commentRepo.fetchComments(book!.id).observe(on: UIScheduler()).startWithResult{
             [unowned self] in
             switch $0 {
             case .success(let comments):
@@ -49,18 +57,24 @@ class CommentTableViewController: UITableViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         let hor = tableView.centerXAnchor.constraint(equalTo: viewSet.centerXAnchor)
         let top = tableView.topAnchor.constraint(equalTo: viewSet.topAnchor, constant: top)
-        let height = tableView.heightAnchor.constraint(equalToConstant: 120)
+        let height = tableView.heightAnchor.constraint(equalToConstant: 700)
         let wid = tableView.widthAnchor.constraint(equalTo: viewSet.widthAnchor, constant: -30)
         
         viewSet.addConstraints([hor, top, wid, height])
     }
+    
+//    func setHeight(_ height : CGFloat) {
+//        let height = tableView!.heightAnchor.constraint(equalToConstant: _cellSize)
+//        
+//    }
 }
 
 extension CommentTableViewController{
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let rows = _commentsArray.count > 5 ? 5 : _commentsArray.count
-        return rows
+        _rows = _commentsArray.count > 5 ? 5 : _commentsArray.count
+        tableView.isHidden = _rows == 0 ? true : false
+        return _rows
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,6 +85,6 @@ extension CommentTableViewController{
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
+        return _cellSize
     }
 }

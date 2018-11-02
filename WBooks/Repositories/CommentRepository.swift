@@ -19,8 +19,8 @@ internal class CommentRepository: AbstractRepository {
     private static let _PathComments = "comments"
 
     
-    public func fetchComments() -> SignalProducer<[UserComment], RepositoryError> {
-        let path = CommentRepository._BooksPath + "/" + CommentRepository._PathBookIDComment + "/" + CommentRepository._PathComments
+    public func fetchComments(_ id : Int) -> SignalProducer<[UserComment], RepositoryError> {
+        let path = CommentRepository._BooksPath + "/" + String(id) + "/" + CommentRepository._PathComments
         return performRequest(method: .get, path: path)
         {
             decode($0).toResult()
