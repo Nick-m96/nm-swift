@@ -14,30 +14,31 @@ import WolmoCore
 
 class BookDetailScrollView: UIScrollView, NibLoadable {
 
-    let bookDetailView = BookInfoDetailView.loadFromNib()! as BookInfoDetailView
-    let headerCollectionView = HeaderCollectionView.loadFromNib()! as HeaderCollectionView
-    let tableCommentVC = CommentTableViewController()
-    let collectionBookVC = SuggestionCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
+    private let _bookDetailView = BookInfoDetailView.loadFromNib()! as BookInfoDetailView
+    private let _headerCollectionView = HeaderCollectionView.loadFromNib()! as HeaderCollectionView
+    private var _tableCommentVC : CommentTableViewController!
+    private let _collectionBookVC = SuggestionCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
     
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = WBookColor.background
         contentSize.height = 1200
         
-        addSubview(collectionBookVC.collectionView!)
-        addSubview(bookDetailView)
-        addSubview(headerCollectionView)
-        addSubview(tableCommentVC.tableView)
+        addSubview(_collectionBookVC.collectionView!)
+        addSubview(_bookDetailView)
+        addSubview(_headerCollectionView)
         
-        collectionBookVC.setConstraints(self, 330)
-        tableCommentVC.setConstraints(self, 430)
-        headerCollectionView.setConstraints(self, 300)
-        bookDetailView.setConstraints(self, 50)
+        _collectionBookVC.setConstraints(self, 330)
+        _headerCollectionView.setConstraints(self, 300)
+        _bookDetailView.setConstraints(self, 50)
     }
     
     func setBook(_ book: Book) {
-        bookDetailView.setupTexts(book)
-        tableCommentVC.setBookID(book.id)
+        _bookDetailView.setupTexts(book)
+        _tableCommentVC = CommentTableViewController(book.id)
+        
+        addSubview(_tableCommentVC.tableView)
+        _tableCommentVC.setConstraints(self, 430)
     }
     
     func setConstraints(_ view: UIView) {

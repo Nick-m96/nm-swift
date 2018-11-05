@@ -29,7 +29,8 @@ class CommentTableViewController: UITableViewController {
         setTableBackground()
     }
     
-    func setBookID(_ bookID : Int){
+    convenience init(_ bookID : Int){
+        self.init()
         self._bookID = bookID
         loadComments()
     }
