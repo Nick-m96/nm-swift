@@ -14,7 +14,7 @@ import WolmoCore
 
 class CommentTableViewController: UITableViewController {
 
-    var bookID : Int?
+    private var _bookID : Int!
     private let _commentRepo = NetworkingBootstrapper.shared.createUserCommentRepository()
     private var _commentsArray = [UserComment]()
     private let _cellSize : CGFloat = 140
@@ -30,12 +30,12 @@ class CommentTableViewController: UITableViewController {
     }
     
     func setBookID(_ bookID : Int){
-        self.bookID = bookID
+        self._bookID = bookID
         loadComments()
     }
     
     func loadComments(){
-        _commentRepo.fetchComments(bookID!).observe(on: UIScheduler()).startWithResult{
+        _commentRepo.fetchComments(_bookID!).observe(on: UIScheduler()).startWithResult{
             [unowned self] in
             switch $0 {
             case .success(let comments):
