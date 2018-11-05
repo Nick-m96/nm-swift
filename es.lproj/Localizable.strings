@@ -26,3 +26,11 @@
 "YEAR_PLACEHOLDER" = "Año";
 "TOPIC_PLACEHOLDER" = "Topico";
 "DESCRIPTION_PLACEHOLDER" = "Descripcion";
+
+/* IMAGE PICKER */
+"CAMERA" = "Camara";
+"CANCEL" = "Cancelar";
+"GALLERYPHOTO" = "Galeria";
+"CAMERANOTAVAILABLE" = "Camera no disponible";
+"CHOOSEORIGINIMAGE" =  "Escoja";
+"PHOTOSOURCE" = "Fuente";

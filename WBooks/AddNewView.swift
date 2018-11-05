@@ -9,7 +9,7 @@
 import UIKit
 import WolmoCore
 
-class AddNewView: UIScrollView, NibLoadable{
+class AddNewView: UIScrollView, NibLoadable, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var txtDescription: UITextField!
@@ -18,7 +18,8 @@ class AddNewView: UIScrollView, NibLoadable{
     @IBOutlet weak var txtAuthor: UITextField!
     @IBOutlet weak var txtBookName: UITextField!
     @IBOutlet weak var btnSubmit: UIButton!
-    @IBOutlet weak var imgBook: UIButton!
+    @IBOutlet weak var btnImagePicker: UIButton!
+
     
     override func awakeFromNib() {
         btnSubmit.setTitle("BTN_SUBMIT".localized(), for: .normal)
@@ -27,5 +28,18 @@ class AddNewView: UIScrollView, NibLoadable{
         txtYear.placeholder = "YEAR_PLACEHOLDER".localized()
         txtTopic.placeholder = "TOPIC_PLACEHOLDER".localized()
         txtDescription.placeholder = "DESCRIPTION_PLACEHOLDER".localized()
+        
+        backgroundColor = UIColor.white
+        layer.cornerRadius = 10
+        contentSize.height = 450
+    }
+    
+    func setConstraints(fromView : UIView){
+        translatesAutoresizingMaskIntoConstraints = false
+        let left = trailingAnchor.constraint(equalTo: fromView.trailingAnchor, constant: -15)
+        let top = topAnchor.constraint(equalTo: fromView.topAnchor, constant: 80)
+        let right = leadingAnchor.constraint(equalTo: fromView.leadingAnchor, constant: 15)
+        
+        fromView.addConstraints([left, top, right])
     }
 }

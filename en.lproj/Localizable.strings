@@ -26,3 +26,12 @@
 
 /* HEADER SUGGESTIONS */
 "LBL_SUGGESTIONS" = "Suggestions";
+
+/* IMAGE PICKER */
+"CAMERA" = "Camera";
+"CANCEL" = "Cancel";
+"GALLERYPHOTO" = "Library";
+"CAMERANOTAVAILABLE" = "Camera not available";
+"CHOOSEORIGINIMAGE" =  "Chosee";
+"PHOTOSOURCE" = "Photo source";
+

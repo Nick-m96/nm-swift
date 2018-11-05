@@ -12,40 +12,59 @@ import ReactiveCocoa
 import ReactiveSwift
 
 class AddNewViewController: UIViewController {
+    private let addNewVM = AddNewView.loadFromNib()! as AddNewView
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "NAVIGATION_BAR_TITLE_ADDNEW".localized()
         view.backgroundColor = WBookColor.background
+        
+        addNewVM.btnImagePicker.reactive.controlEvents(.touchUpInside).observeValues { [unowned self] btn in
+            self.PickImage()
+        }
     }
 
     override func loadView() {
         super.loadView()
-        let addNewVM = AddNewView.loadFromNib()! as AddNewView
-        setViewStyle(addNewVM)
+        addNewVM.setConstraints(fromView : view)
         view.addSubview(addNewVM)
-        setConstraints(addNewVM)
+    }
+}
+
+extension  AddNewViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    fileprivate func PickImage(){
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
         
-        let action = MediaPickerService.init(viewController: self, allowsEditing: false)
-        action.presentImagePickerController(from: UIImagePickerControllerSourceType.camera, for: [MediaPickerMediaType.image]) {
-            
-        }
+        let actions = UIAlertController(title: "PHOTOSOURCE".localized(), message: "CHOOSEORIGINIMAGE".localized(), preferredStyle: .actionSheet)
         
-//        addNewVM.imgBook.reactive.pressed = CocoaAction(action)
+        actions.addAction(UIAlertAction(title: "CAMERA".localized(), style: .default, handler: {
+            (action:UIAlertAction) in
+            if UIImagePickerController.isSourceTypeAvailable(.camera){
+                imagePicker.sourceType = .camera
+                self.present(imagePicker, animated: true, completion: nil)
+            }
+            else{
+                print("CAMERANOTAVAILABLE".localized())
+            }}))
+        
+        actions.addAction(UIAlertAction(title: "GALLERYPHOTO".localized(), style: .default, handler: {
+            (action:UIAlertAction) in
+            imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)}))
+        
+        actions.addAction(UIAlertAction(title: "CANCEL".localized(), style: .cancel, handler: nil))
+        
+        self.present(actions, animated: true, completion: nil)
     }
     
-    fileprivate func setViewStyle(_ addNewVM: AddNewView) {
-        addNewVM.view.backgroundColor = UIColor.white
-        addNewVM.view.layer.cornerRadius = 10
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        addNewVM.btnImagePicker.setBackgroundImage(image, for: .normal)
+        picker.dismiss(animated: true, completion: nil)
     }
     
-    fileprivate func setConstraints(_ addNewVM: AddNewView) {
-        addNewVM.translatesAutoresizingMaskIntoConstraints = false
-        let hor = addNewVM.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        let ver = addNewVM.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        let height = addNewVM.heightAnchor.constraint(equalTo: view.heightAnchor, constant: -150)
-        let wid = addNewVM.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -40)
-        
-        view.addConstraints([hor, ver, wid, height])
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
 }
