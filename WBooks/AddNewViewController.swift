@@ -20,7 +20,7 @@ class AddNewViewController: UIViewController {
         view.backgroundColor = WBookColor.background
         
         addNewVM.btnImagePicker.reactive.controlEvents(.touchUpInside).observeValues { [unowned self] btn in
-            self.PickImage()
+            self.pickImage()
         }
     }
 
@@ -32,7 +32,7 @@ class AddNewViewController: UIViewController {
 }
 
 extension  AddNewViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-    fileprivate func PickImage(){
+    fileprivate func pickImage(){
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         

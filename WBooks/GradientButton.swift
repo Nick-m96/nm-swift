@@ -15,14 +15,14 @@ class GradientButton: UIButton {
         layer.cornerRadius = 15
         layer.masksToBounds = true
         tintColor = UIColor.white
-        setEnable()
+        setEnabled()
     }
     
-    func setEnable(){
+    func setEnabled(){
         self.gradient = ViewGradient(colors: [WBookColor.gradientLeft, WBookColor.gradientRight], direction: GradientDirection.leftToRight)
     }
     
-    func setDisable(){
+    func setDisabled(){
         self.gradient = ViewGradient(colors: [UIColor.gray, UIColor.gray], direction: GradientDirection.leftToRight)
     }
 }
