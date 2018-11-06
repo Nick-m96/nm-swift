@@ -36,7 +36,7 @@ class CommentTableViewController: UITableViewController {
     }
     
     func loadComments(){
-        _commentRepo.fetchComments(_bookID!).observe(on: UIScheduler()).startWithResult{
+        _commentRepo.fetchComments(_bookID).observe(on: UIScheduler()).startWithResult{
             [unowned self] in
             switch $0 {
             case .success(let comments):
