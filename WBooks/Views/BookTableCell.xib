@@ -69,7 +69,6 @@
                 <outlet property="imgBook" destination="Bdz-Kf-CoY" id="ykd-em-noX"/>
                 <outlet property="lblAuthor" destination="T6s-vi-Ezy" id="DvO-0D-0JW"/>
                 <outlet property="lblTitle" destination="xmb-OX-bPo" id="4ao-Dc-KrP"/>
-                <outlet property="view" destination="GUa-SI-vS7" id="uyr-IF-dFC"/>
             </connections>
             <point key="canvasLocation" x="39.200000000000003" y="60.26986506746627"/>
         </tableViewCell>

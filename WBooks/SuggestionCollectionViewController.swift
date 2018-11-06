@@ -12,9 +12,9 @@ import Foundation
 import Networking
 
 class SuggestionCollectionViewController: UICollectionViewController {
-    
+    private let _width : CGFloat = -30
+    private let _height : CGFloat = 80
     private let _image = UIImage(named: "book")
-    private let _headerID = "header"
     private let _BookCell = "SuggestionCell"
 
     override func viewDidLoad() {
@@ -42,16 +42,22 @@ class SuggestionCollectionViewController: UICollectionViewController {
         return cell
     }
     
-    func setConstraints(_ view : UIView) {
+    func setConstraints(_ view : UIView, _ top : CGFloat) {
         guard let collectionView = collectionView else {
             return
         }
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         let hor = collectionView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        let botton = collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
-        let height = collectionView.heightAnchor.constraint(equalToConstant: 80)
-        let wid = collectionView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30)
+        var up : NSLayoutConstraint
+        if top < (0 as CGFloat) {
+            up = collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: top)
+        }
+        else{
+            up = collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: top)
+        }
+        let height = collectionView.heightAnchor.constraint(equalToConstant: _height)
+        let wid = collectionView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: _width)
         
-        view.addConstraints([hor, botton, height, wid])
+        view.addConstraints([hor, up, height, wid])
     }
 }
