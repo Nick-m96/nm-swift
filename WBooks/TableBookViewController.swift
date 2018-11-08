@@ -74,9 +74,8 @@ extension TableBookViewController{
         if didSelectedEnable{
             let book = _bookArray[indexPath.row]
             let BookDetailVC = BookInfoDetailViewController()
-            BookDetailVC.bookDetail.setupTexts(book: book)
-            
-            self.navigationController?.pushViewController(BookDetailVC, animated: true)
+            BookDetailVC.scrollView.setBook(book)
+            navigationController?.pushViewController(BookDetailVC, animated: true)
         }
     }
 }
@@ -89,9 +88,9 @@ extension TableBookViewController{
         tableView.translatesAutoresizingMaskIntoConstraints = false
         let hor = tableView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         let botton = tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -160)
-        let height = tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 30)
-        let wid = tableView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30)
+        let top = tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 30)
+        let width = tableView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30)
         
-        view.addConstraints([hor, botton, wid, height])
+        view.addConstraints([hor, botton, width, top])
     }
 }

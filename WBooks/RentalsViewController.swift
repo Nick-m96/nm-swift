@@ -28,14 +28,14 @@ class RentalsViewController: UIViewController {
     
     private func setHeaderCollection(){
         view.addSubview(_header)
-        _header.setConstraints(view)
+        _header.setConstraints(view, -120)
     }
 
     private func setCollectionBookVC(){
         let collectionBookVC = SuggestionCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
         self.addChildViewController(collectionBookVC)
         view.addSubview(collectionBookVC.collectionView!)
-        collectionBookVC.setConstraints(view)
+        collectionBookVC.setConstraints(view, -40)
 
     }
     

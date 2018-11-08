@@ -17,14 +17,9 @@ class MainTabBarViewController: UITabBarController {
     }
     
     func setupNavBar(){
-        if #available(iOS 11.0, *) {
-            let searchController = UISearchController(searchResultsController: nil)
-            navigationItem.searchController = searchController
-        }
         let backgroundNav = UIImage(named: "Background-navBar")
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.white]
         UINavigationBar.appearance().setBackgroundImage(backgroundNav?.resizableImage(withCapInsets: UIEdgeInsets.zero, resizingMode: .stretch), for: .default)
-        
         UINavigationBar.appearance().barStyle = .blackOpaque
         UINavigationBar.appearance().shadowImage = UIImage()
     }

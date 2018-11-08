@@ -11,6 +11,7 @@
 "NAVIGATION_BAR_TITLE_WISHLIST" = "Lista de deseos";
 "NAVIGATION_BAR_TITLE_RENTALS" = "Mis rentas";
 "NAVIGATION_BAR_TITLE_ADDNEW" = "Agregar Nuevo";
+"NAVIGATION_BAR_TITLE_BOOKDETAIL" = "Detalle del libro";
 
 /* BUTTON TEXT */
 "BTN_SUBMIT" = "Enviar";
