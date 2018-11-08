@@ -12,7 +12,7 @@ import UIKit
 class RoundedBuuton: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = 20
+        layer.cornerRadius = 15
         layer.borderWidth = 1
         layer.masksToBounds = true
         tintColor = WBookColor.gradientLeft
