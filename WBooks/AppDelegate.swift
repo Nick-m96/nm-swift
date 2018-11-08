@@ -18,8 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NetworkingBootstrapper.shared.bootstrap()
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        let mainVC = MainTabBarViewController()
-        window?.rootViewController = mainVC
+        window?.rootViewController =  MainTabBarViewController()
         return true
     }
 

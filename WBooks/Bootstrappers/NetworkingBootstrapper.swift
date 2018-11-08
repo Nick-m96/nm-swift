@@ -46,6 +46,14 @@ class NetworkingBootstrapper {
         
         return repository
     }
+    
+    func createUserCommentRepository() -> CommentRepository{
+        let repository = CommentRepository(
+            networkingConfiguration: networkingConfiguration,
+            sessionManager: _sessionManager)
+        
+        return repository
+    }
 }
 
 // MARK: Private Methods
