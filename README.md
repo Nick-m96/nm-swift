@@ -3,14 +3,6 @@ WBooks iOS
 
 WBooks es una aplicación que gestiona reservas de libros para la biblioteca que dispone Wolox en el 2do piso.
 
-# Project info & resources
-
-* **Technical Leader**: Daniela Riesgo - daniela.riesgo@wolox.com.ar
-
-  * [Trello board](https://trello.com/b/U7aTD8J8/training-swift-nicolas-manograsso): Project issues and current status.
-  * [Google Drive](https://drive.google.com/drive/folders/0B0bbTjmKxmYsVVdxMkRTMVNmdnM): Design resources and assets.
-
-
 # Setup
 
 ## Create a GitHub access token
@@ -26,7 +18,7 @@ This project uses [CarthageCache](https://github.com/guidomb/carthage_cache) to 
 After setting up the required accounts from all third party service, run the following commands:
 
 ```
-git clone git@github.com:wolox-training/nm-swift.git
+git clone git@github.com:NickMano/nm-swift.git
 cd nm-swift
 script/bootstrap
 open WBooks.xcodeproj
@@ -41,7 +33,3 @@ Inside the `script` folder there are several scripts to facilitate the developme
   * `script/bootstrap`: Bootstraps the project for the first time.
   * `script/test`: Runs the project's tests
   * `script/update`: Updates the project's dependencies.
-
-# Guidelines
-
-Please before adding any code read the [pull request template](./pull_request_template.md) on how to submit a pull request with the proper format to be able to be merged upstream and also the [coding guidelines](https://github.com/Wolox/ios-style-guide) that must be followed.
