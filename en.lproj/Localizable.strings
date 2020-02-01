@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  WBooks
+
+  Created by Nicolas Manograsso on 17/10/2018.
+  Copyright © 2018 Wolox. All rights reserved.
+*/
+
+/* NAVIGATION TITLE VIEW */
+"NAVIGATION_BAR_TITLE_LIBRARY" = "Library";
+"NAVIGATION_BAR_TITLE_WISHLIST" = "Wishlist";
+"NAVIGATION_BAR_TITLE_RENTALS" = "My Rentals";
+"NAVIGATION_BAR_TITLE_ADDNEW" = "Add New";
+"NAVIGATION_BAR_TITLE_BOOKDETAIL" = "Book Detail";
+
+/* BUTTON TEXT */
+"BTN_SUBMIT" = "Submit";
+"BUTTON_ADD_WISHLIST" = "Add to Wishlist";
+"BUTTON_RENT" = "Rent";
+
+/* TEXT FIELD PLACEHOLDER */
+"BOOK_NAME_PLACEHOLDER" = "Book\'s name";
+"AUTHOR_PLACEHOLDER" = "Author";
+"YEAR_PLACEHOLDER" = "Year";
+"TOPIC_PLACEHOLDER" = "Topic";
+"DESCRIPTION_PLACEHOLDER" = "Description";
+
+/* HEADER SUGGESTIONS */
+"LBL_SUGGESTIONS" = "Suggestions";
+
+/* IMAGE PICKER */
+"CAMERA" = "Camera";
+"CANCEL" = "Cancel";
+"GALLERYPHOTO" = "Library";
+"CAMERANOTAVAILABLE" = "Camera not available";
+"CHOOSEORIGINIMAGE" =  "Chosee";
+"PHOTOSOURCE" = "Photo source";
+

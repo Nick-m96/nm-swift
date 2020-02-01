@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookInfoDetailView" customModule="WBooks" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleAspectFit" restorationIdentifier="BookInfoDetailView" id="iN0-l3-epB" customClass="BookInfoDetailView" customModule="WBooks" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="hp7-SC-8yG">
+                    <rect key="frame" x="20" y="10" width="315" height="230"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rRy-Ar-T2H">
+                            <rect key="frame" x="0.0" y="0.0" width="315" height="113"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="roh-Kg-In4">
+                                    <rect key="frame" x="0.0" y="0.0" width="90" height="113"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="90" id="RHu-gl-fbN"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fg5-ub-W1R">
+                                    <rect key="frame" x="110" y="0.0" width="205" height="113"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UX Storiescdcdcdcdc " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZF4-Rk-Qnd">
+                                            <rect key="frame" x="0.0" y="0.0" width="205" height="29"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avaible" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXY-mK-yR9">
+                                            <rect key="frame" x="0.0" y="31" width="205" height="18.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.59384782570677397" green="0.98836263020833337" blue="0.44877623149211371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timothy Cross" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nQ-jh-HM2">
+                                            <rect key="frame" x="0.0" y="51.5" width="205" height="18.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1982" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09K-0Q-kYt">
+                                            <rect key="frame" x="0.0" y="72" width="205" height="18.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Novel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCN-8A-cDL">
+                                            <rect key="frame" x="0.0" y="92.5" width="205" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="ZF4-Rk-Qnd" secondAttribute="trailing" id="Ltm-0f-vuO"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <viewLayoutGuide key="safeArea" id="3MD-fZ-WNI"/>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Wpn-qw-654">
+                            <rect key="frame" x="0.0" y="135" width="315" height="95"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLl-L0-KsF" customClass="RoundedBuuton" customModule="WBooks" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="7SX-aE-yrI"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <state key="normal" title="ADD TO WISHLIST"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tz-Mp-Nja" customClass="GradientButton" customModule="WBooks" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="55" width="315" height="40"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="IYI-QK-Wfj"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <state key="normal" title="RENT">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.59384782570000005" green="0.98836263020000004" blue="0.44877623150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </stackView>
+            </subviews>
+            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hp7-SC-8yG" secondAttribute="trailing" constant="20" id="1Ce-NR-ebk"/>
+                <constraint firstItem="hp7-SC-8yG" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="2P2-sf-hq0"/>
+                <constraint firstItem="hp7-SC-8yG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5aZ-ZO-JmL"/>
+                <constraint firstItem="hp7-SC-8yG" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="71U-Np-Clx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hp7-SC-8yG" secondAttribute="bottom" constant="10" id="W11-qh-De4"/>
+                <constraint firstItem="hp7-SC-8yG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="iGM-kf-ZQg"/>
+                <constraint firstItem="hp7-SC-8yG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="k22-lH-kkS"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bookAuthor" destination="8nQ-jh-HM2" id="wxd-V6-HiP"/>
+                <outlet property="bookGenre" destination="bCN-8A-cDL" id="ajh-Z7-vpj"/>
+                <outlet property="bookImage" destination="roh-Kg-In4" id="LoZ-EM-2px"/>
+                <outlet property="bookTitle" destination="ZF4-Rk-Qnd" id="962-5I-siz"/>
+                <outlet property="bookYear" destination="09K-0Q-kYt" id="yXx-zS-Wzz"/>
+                <outlet property="btnAddWishlist" destination="TLl-L0-KsF" id="YdY-On-Qom"/>
+                <outlet property="btnRent" destination="5Tz-Mp-Nja" id="cCF-BE-jER"/>
+            </connections>
+            <point key="canvasLocation" x="136.80000000000001" y="3.1484257871064472"/>
+        </view>
+    </objects>
+</document>
