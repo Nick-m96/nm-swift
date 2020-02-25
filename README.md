@@ -1,7 +1,7 @@
 WBooks iOS
 ----------------
 
-WBooks es una aplicación que gestiona reservas de libros para la biblioteca que dispone Wolox en el 2do piso.
+wBooks is a test application that manages book reservations for the library that Wolox has on the 2nd floor.
 
 # Setup
 
