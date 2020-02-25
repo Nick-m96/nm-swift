@@ -19,7 +19,7 @@ After setting up the required accounts from all third party service, run the fol
 
 ```
 git clone git@github.com:NickMano/nm-swift.git
-cd nm-swift
+cd wBooks-ios
 script/bootstrap
 open WBooks.xcodeproj
 ```
